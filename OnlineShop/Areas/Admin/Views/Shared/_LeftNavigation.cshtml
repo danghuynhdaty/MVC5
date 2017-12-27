@@ -1,0 +1,104 @@
+﻿
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+        <!-- Sidebar user panel -->
+        <!--
+         <div class="user-panel">
+             <div class="pull-left image">
+                 <img src="~/Assets/Admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+             </div>
+             <div class="pull-left info">
+                 <p>Alexander Pierce</p>
+                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+             </div>
+         </div>
+         -->
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Tìm kiếm">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <!--node Trang chủ -->
+            <li>
+                <a href="/Admin">
+                    <i class="fa fa-dashboard"></i>
+                    <span>Trang chủ</span>
+                </a>
+            </li>
+            <!--node Người dùng -->
+            <li class="treeview">
+                <a href="/Admin/Account/">
+                    <i class="fa  fa-users"></i>
+                    <span>Người dùng</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/Admin/Account"><i class="fa fa-user"></i> Người dùng</a></li>
+                    <li><a href="/Admin/FeedBack"><i class="fa  fa-comments"></i> Phản hồi</a></li>
+                </ul>
+            </li>
+            <!--node Sản phẩm -->
+            <li class="treeview">
+                <a href="/Admin/Product/">
+                    <i class="fa fa-shopping-bag"></i>
+                    <span>Sản phẩm</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/Admin/ProductCategory"><i class="fa fa-list"></i> Danh mục sản phẩm</a></li>
+                    <li><a href="/Admin/Product"><i class="fa fa-shopping-bag"></i> Sản phẩm</a></li>
+
+                </ul>
+            </li>
+            <!--node Tin tức -->
+            <li class="treeview">
+                <a href="/Admin/Content/">
+                    <i class="fa fa-newspaper-o"></i>
+                    <span>Tin tức</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/Admin/CategoryNews"><i class="fa fa-list"></i> Danh mục tin tức</a></li>
+                    <li><a href="/Admin/Content"><i class="fa fa-newspaper-o"></i> Tin tức</a></li>
+
+                </ul>
+            </li>
+
+
+            <!--node Hệ thống -->
+            <li class="treeview">
+                <a href="/Admin/SystemConfig/">
+                    <i class="fa fa-cogs"></i>
+                    <span>Hệ thống</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/Admin/About"><i class="fa fa-files-o"></i> Giới thiệu</a></li>
+                    <li><a href="/Admin/Footer"><i class="fa fa-cog"></i> Chân trang</a></li>
+                    <li><a href="/Admin/Menu"><i class="fa fa-bars"></i> Menu</a></li>
+                    <li><a href="/Admin/Slide"><i class="fa fa-file-image-o"></i> Slides</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

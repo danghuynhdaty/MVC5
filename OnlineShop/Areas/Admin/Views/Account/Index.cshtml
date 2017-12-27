@@ -1,0 +1,160 @@
+﻿@model PagedList.IPagedList<Model.EF.Account>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Quản lý người dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section header{
+    Quản lý người dùng
+}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            @using (Html.BeginForm("Index", "Account", FormMethod.Get))
+            {
+                <div class="box-header">
+                    <h3 class="box-title">Danh sách người dùng</h3>
+
+                    <div class="box-tools pull-right">
+                        <div class="input-group input-group-sm" style="width: 250px;">
+                            @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control pull-right", @placeholder = "Tìm kiếm" })
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            }
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover table-bordered">
+                    <tr>
+                        <th>
+                            @Html.ActionLink("ID", "Index", new { sortOrder = ViewBag.IDSortPara })
+                        </th>
+                        <th>
+                            @Html.ActionLink("Tài khoản", "Index", new { sortOrder = ViewBag.UserNameSortPara })
+                        </th>
+                        <th>
+                            @Html.ActionLink("Tên người dùng", "Index", new { sortOrder = ViewBag.NameSortPara })
+                        </th>
+                        <th>
+                            @Html.ActionLink("Email", "Index", new { sortOrder = ViewBag.EmailSortPara })
+                        </th>
+                        <th>Số điện thoại</th>
+                        <th>Địa chỉ</th>
+                        <th>
+                            @Html.ActionLink("Trạng thái", "Index", new { sortOrder = ViewBag.StatusSortPara })
+                        </th>
+                        <th>Chức năng</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr id="row_@item.ID" class="">
+                            <td>@item.ID</td>
+                            <td>@item.UserName</td>
+                            <td>@item.Name</td>
+                            <td>@item.Email</td>
+                            <td>@item.Phone</td>
+                            <td>@item.Address</td>
+                            @if (item.Status)
+                            {
+                                <td><span class="label label-success">Kích hoạt</span></td>
+                            }
+                            else
+                            {
+                                <td><span class="label label-danger">Khóa</span></td>
+                            }
+                            <td>
+                                @Html.ActionLink("Chi tiết", "Details", new { id = item.ID }) |
+                                @Html.ActionLink("Sửa", "Edit", new { id = item.ID }) |
+                                
+                                @Ajax.ActionLink("Xóa", "Delete", new { id = item.ID }, new AjaxOptions
+                           {
+                               HttpMethod = "Delete",
+                               Confirm = "Bạn muốn xóa tài khoản này?",
+                               // dùng ajax thì browser nó sẽ không load lại trang
+                               OnSuccess = "$('#row_"+@item.ID+"').remove()",
+                               //OnComplete = "window.location.replace('" + @Url.Action("Index", "Account") + "');"
+                           }, new { @class = "itemDelete" })
+
+
+
+
+                                @*@Html.ActionLink("Xóa", "Delete", new { id = item.ID }, new { onclick = "return confirm('are you sure you wish to delete this article?');" })*@
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+            <!-- /.box-body -->
+            <!-- /.box-footer -->
+        </div>
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) của @Model.PageCount
+    </div>
+    <!-- /.box -->
+
+</div>
+
+
+@*<div class="modal fade" id="confirmmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Thông báo</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn muốn xóa tài khoản này?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default " id="btnCancel" data-dismiss="modal">Hủy</button>
+                    <a  id="btnContinueDelete" class="btn btn-primary">Xác nhận</a>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+
+    <script>
+        $(document).ready(function () {
+            $('a[data-confirm]').click(function (ev) {
+                var href = $(this).attr('href');
+
+                if (!$('#dataConfirmModal').length) {
+                    $('body').append('<div id="dataConfirmModal" class="modal" role="dialog" aria-labelledby="dataConfirmLabel" aria-hidden="true"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="dataConfirmLabel">Please Confirm</h3></div><div class="modal-body"></div><div class="modal-footer"><button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button><a class="btn btn-primary" id="dataConfirmOK">OK</a></div></div>');
+                }
+                $('#dataConfirmModal').find('.modal-body').text($(this).attr('data-confirm'));
+                $('#dataConfirmOK').attr('href', href);
+                $('#dataConfirmModal').modal({ show: true });
+                return false;
+            });
+        });
+
+        //$(document).ready(function () {
+        //    var href = $('a[data-confirm]').attr('data-href');
+        //    $('#btnContinueDelete').attr('href', href);
+        //    alert("sdad");
+        //});
+        //function Confirm() {
+        //    $('a[data-href]').click(function (ev) {
+        //        var href = $(this).attr('data-href');
+
+        //        //$('#confirmmodal').find('.modal-body').text($(this).attr('data-confirm'));
+        //        $('#btnContinueDelete').attr('href', href);
+        //        $('#confirmmodal').modal({ show: true });
+        //    };
+        //    }
+
+
+    </script>*@
