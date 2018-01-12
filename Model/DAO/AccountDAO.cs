@@ -157,7 +157,24 @@ namespace Model.DAO
             return model.ToPagedList(pageNumber, pageSize);
         }
 
+        /// <summary>
+        /// thay đổi trạng thái của tài khoản
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool ChangeStatus(long id)
+        {
+            //Lấy ra account cần đổi status 
+            var account = db.Accounts.Find(id);
 
+            //thay đổi status của account
+            account.Status = !account.Status;
+
+            //lưu thay đổi xuống database
+            db.SaveChanges();
+        
+            return account.Status;
+        }
 
 
     }

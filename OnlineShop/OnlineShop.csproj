@@ -6768,6 +6768,7 @@
     <Content Include="Assets\Admin\dist\js\demo.js" />
     <Content Include="Assets\Admin\dist\js\pages\dashboard.js" />
     <Content Include="Assets\Admin\dist\js\pages\dashboard2.js" />
+    <Content Include="Assets\Admin\JS\Controller\accountController.js" />
     <Content Include="Assets\Admin\plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="Assets\Admin\plugins\bootstrap-slider\slider.css" />
     <Content Include="Assets\Admin\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.js" />
@@ -8591,9 +8592,15 @@
     <Content Include="Assets\Admin\plugins\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Assets\Admin\plugins\ckeditor\skins\moono-lisa\readme.md" />
     <Content Include="Areas\Admin\Views\Shared\_LeftNavigation.cshtml" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Areas\Admin\Views\Content\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Content\Edit.cshtml" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
@@ -8637,7 +8644,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\OnlineShopModel.csproj">
