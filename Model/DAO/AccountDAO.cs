@@ -119,7 +119,7 @@ namespace Model.DAO
         /// <returns></returns>
         public IEnumerable<Account> GetAllAccountPaged(int pageNumber, int pageSize, string searchString, string sortOrder)
         {
-            IEnumerable<Account> model = db.Accounts;
+            var model = from s in db.Accounts select s;
             if (!string.IsNullOrEmpty(searchString))
             {
                 model = model.Where(p => p.UserName.ToUpper().Contains(searchString.ToUpper()) || p.Name.ToUpper().Contains(searchString.ToUpper()) || p.Email.ToUpper().Contains(searchString.ToUpper()));

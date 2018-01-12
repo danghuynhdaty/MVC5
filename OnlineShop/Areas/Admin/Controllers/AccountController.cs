@@ -14,7 +14,6 @@ namespace OnlineShop.Areas.Admin.Controllers
     {
         // GET: Admin/Account
         public ActionResult Index(int? page, string searchString, string currentFilter, string sortOrder)
-
         {
             // lấy sort order đẩy xuống view
             ViewBag.CurrentSort = sortOrder;
