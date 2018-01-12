@@ -1,11 +1,9 @@
 ﻿@model Model.EF.Account
 
 @{
-    ViewBag.Title = "Tạo tài khoản";
+    ViewBag.Title = "Thêm tài khoản";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-
-
 
 @section header{
     Thêm tài khoản
@@ -29,45 +27,38 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.UserName)
                         @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger " })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(model => model.PassWord)
                         @Html.PasswordFor(model => model.PassWord, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.PassWord, "", new { @class = "text-danger" })
                     </div>
-                    @*<div class="form-group">
-                            @Html.LabelFor(model => model.RePassWord)
-                            @Html.PasswordFor(model => model.RePassWord, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(model => model.RePassWord, "", new { @class = "text-danger" })
-                        </div>*@
+
                     <div class="form-group">
                         @Html.LabelFor(model => model.Name)
                         @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                     </div>
+
                     <div class="form-group">
                         @Html.LabelFor(model => model.Address)
                         @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
                     </div>
+
                     <div class="form-group">
                         @Html.LabelFor(model => model.Email)
                         @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @type = "email" })
                         @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                     </div>
+
                     <div class="form-group">
                         @Html.LabelFor(model => model.Phone)
                         @Html.TextBoxFor(model => model.Phone, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
                     </div>
-                    @*<div class="form-group">
-                            @Html.LabelFor(model => model.Status)
-                            <div class="checkbox">
-                                @Html.CheckBoxFor(model => model.Status)
-                            </div>
-                            @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
-                        </div>*@
+          
                     <div class="form-group">
                         @Html.LabelFor(model => model.Status)
                         <div class="checkbox">
@@ -83,7 +74,7 @@
                 <!-- /.box-body -->
                 <div class="box-footer">
                     <button type="submit" class="btn btn-primary">Tạo tài khoản</button>
-                    @Html.ActionLink("Hủy", "Index",new object { }, new { @class = "btn btn-default" })
+                    @Html.ActionLink("Hủy", "Index", new object { }, new { @class = "btn btn-default" })
                 </div>
             }
         </div>

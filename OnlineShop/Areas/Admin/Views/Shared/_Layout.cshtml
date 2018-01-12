@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>OnlineShop @ViewBag.Title</title>
+    <title>@ViewBag.Title</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -427,15 +427,13 @@
     </div>
     <!-- ./wrapper -->
     <!-- jQuery 3 -->
-    <script src="~/Assets/Admin/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-
-    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery-3.2.1.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
 
 
     <!-- Bootstrap 3.3.7 -->
     <script src="~/Assets/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+   
     <!-- SlimScroll -->
     <script src="~/Assets/Admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->
@@ -448,12 +446,13 @@
     <!-- CKFinder -->
     <script src="~/Assets/Admin/plugins/ckfinder/ckfinder.js"></script>
     <script src="~/Assets/Admin/plugins/ckeditor/ckeditor.js"></script>
-    <script>
+    @*<script>
         $(document).ready(function () {
             $('.sidebar-menu').tree()
         })
-    </script>
+    </script>*@
 
     @RenderSection("jsFooter", required: false)
+   
 </body>
 </html>

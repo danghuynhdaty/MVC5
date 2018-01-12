@@ -1,7 +1,7 @@
 ﻿@model Model.EF.Account
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Thông tin tài khoản";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -66,16 +66,16 @@
                             Kích hoạt
                         </label>
                     </div>
+
                 </div>
 
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
                 @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.ID }, new { @class = "btn btn-primary" })
-                @Html.ActionLink("Về trang chủ", "Index",new { }, new { @class = "btn btn-default" })
+                @Html.ActionLink("Về trang chủ", "Index", new { }, new { @class = "btn btn-default" })
             </div>
         </div>
         <!-- /.box -->
     </div>
 </div>
-           

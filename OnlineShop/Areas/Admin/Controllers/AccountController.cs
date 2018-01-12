@@ -43,7 +43,7 @@ namespace OnlineShop.Areas.Admin.Controllers
             // lấy ra page từ url, nếu không tồn tại mặc định là 1
             int pageNumber = page ?? 1;
             //pageSize của mỗi page
-            int pageSize = 5;
+            int pageSize = 10;
             IEnumerable<Account> model = AccountDAO.Instance.GetAllAccountPaged(pageNumber, pageSize, searchString, sortOrder);
             return View(model);
         }
@@ -123,6 +123,14 @@ namespace OnlineShop.Areas.Admin.Controllers
             Account model = AccountDAO.Instance.GetAccountByID(id);
             return View(model);
         }
+
+        [HttpPost]
+        public JsonResult ChangeStatus(long id)
+        {
+            var result = AccountDAO.Instance.ChangeStatus(id);
+            return Json(result,JsonRequestBehavior.AllowGet);
+        }
+
 
     }
 }
