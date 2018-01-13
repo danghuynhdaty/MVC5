@@ -66,16 +66,25 @@
                             <td>@item.Name</td>
                             <td>@item.Email</td>
                             <td>@item.Phone</td>
-                            <td>@item.Address</td>
-                            @*<td><a href="#" class="btnchangestatus label label-success" data-id="@item.id">@(item.status == true ? "kích hoạt" : "khóa")</a></td>*@
+                            <td>@item.Address</td>                            
                             <td>
-                                @Ajax.ActionLink((@item.Status == true ? "Kích hoạt" : "Khóa"), "ChangeStatus", new { id = item.ID }, new AjaxOptions
-                           {
-                               HttpMethod = "POST",
-                               Confirm = (@item.Status == true ? "Bạn muốn khóa tài khoản này?" : "Bạn muốn kích hoạt tài khoản này?"),
-                               OnSuccess = "changeStatusSuccess(" + @item.ID + ");"
-                           }, new { @id = "status_" + item.ID, @class = (@item.Status == true ? "label label-success" : "label label-danger") })
-                            </td>
+                                    @Html.ActionLink((@item.Status == true ? "Kích hoạt" : "Khóa"),"ChangeStatus","Account",new { id = @item.ID},new { @class=(@item.Status == true ? "btnchangestatus label label-success" : "btnchangestatus label label-danger") , @data_id=@item.ID  })
+                                </td>
+                            @{
+                                #region các cách dùng ajax
+/*
+ @*<td>
+     @Ajax.ActionLink((@item.Status == true ? "Kích hoạt" : "Khóa"), "ChangeStatus", new { id = item.ID }, new AjaxOptions
+{
+    HttpMethod = "POST",
+    Confirm = (@item.Status == true ? "Bạn muốn khóa tài khoản này?" : "Bạn muốn kích hoạt tài khoản này?"),
+    OnSuccess = "changeStatusSuccess(" + @item.ID + ");"
+}, new { @id = "status_" + item.ID, @class = (@item.Status == true ? "label label-success" : "label label-danger") })
+ </td>*@
+ */
+#endregion
+                            }
+                            
                             <td>
                                 @Html.ActionLink("Chi tiết", "Details", new { id = item.ID }) |
                                 @Html.ActionLink("Sửa", "Edit", new { id = item.ID }) |
@@ -83,12 +92,12 @@
                            {
                                HttpMethod = "Delete",
                                Confirm = "Bạn muốn xóa tài khoản này?",
-                               OnSuccess = "$('#row_" + @item.ID + "').remove()",                               
+                               OnSuccess = "$('#row_" + @item.ID + "').remove()",
                            })
 
                             </td>
                         </tr>
-                    }
+                                }
                 </table>
             </div>
             <!-- /.box-body -->

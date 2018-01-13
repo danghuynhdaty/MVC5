@@ -113,13 +113,23 @@ namespace Model.DAO
             return db.Accounts.Find(id);
         }
 
+
+
+
         /// <summary>
         /// lấy danh sách tất cả account
         /// </summary>
         /// <returns></returns>
         public IEnumerable<Account> GetAllAccountPaged(int pageNumber, int pageSize, string searchString, string sortOrder)
         {
-            var model = from s in db.Accounts select s;
+            //lấy ra account trừ admin
+            var model = from s 
+                        in db.Accounts
+                        where s.UserName != "daty"
+                        select s;
+
+
+
             if (!string.IsNullOrEmpty(searchString))
             {
                 model = model.Where(p => p.UserName.ToUpper().Contains(searchString.ToUpper()) || p.Name.ToUpper().Contains(searchString.ToUpper()) || p.Email.ToUpper().Contains(searchString.ToUpper()));
