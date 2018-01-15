@@ -69,6 +69,7 @@ namespace OnlineShop.Areas.Admin.Controllers
                     long id = AccountDAO.Instance.Insert(account);
                     if (id > 0)
                     {
+                        SetMessageBox("Thêm tài khoản thành công","success");
                         return RedirectToAction("Index", "Account");
                     }
                     else

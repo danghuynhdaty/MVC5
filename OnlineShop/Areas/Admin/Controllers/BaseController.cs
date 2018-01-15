@@ -15,12 +15,30 @@ namespace OnlineShop.Areas.Admin.Controllers
             var session = (UserLogin)Session[CommontConstant.USER_SESSION];
             //nếu không tồn tại thì redirect về trang login 
             // UserLogin có 1 biến RememberMe nếu true thì lúc log out không xóa session nếu false thì lúc logout xóa sạch USER_SESSION
-            if (session==null)
+            if (session == null)
             {
                 filterContext.Result = new RedirectToRouteResult(
-                    new RouteValueDictionary(new { Controller = "Login" , Action = "Index" , Area = "Admin"  }));
+                    new RouteValueDictionary(new { Controller = "Login", Action = "Index", Area = "Admin" }));
             }
             base.OnActionExecuting(filterContext);
         }
+
+        protected void SetMessageBox(string message, string alertType)
+        {
+            TempData["AlertMessage"] = message;
+            if (alertType == "success")
+            {
+                TempData["AlertType"] = "alert-success";
+            }
+            else if (alertType == "warning")
+            {
+                TempData["AlertType"] = "alert-warning";
+            }
+            else if (alertType == "error")
+            {
+                TempData["AlertType"] = "alert-danger";
+            }
+        }
+
     }
 }
