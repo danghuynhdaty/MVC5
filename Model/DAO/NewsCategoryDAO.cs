@@ -15,7 +15,16 @@ namespace OnlineShopModel.DAO
 
         private static NewsCategoryDAO instance;
 
-        public static NewsCategoryDAO Instance { get => instance ?? (new NewsCategoryDAO()); }
+        public static NewsCategoryDAO Instance {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new NewsCategoryDAO();
+                }
+                return instance;
+            }
+        }
 
         private NewsCategoryDAO()
         {

@@ -1,4 +1,4 @@
-/*! AdminLTE app.js
+﻿/*! AdminLTE app.js
 * ================
 * Main JS application file for AdminLTE v2. This file
 * should be included in all pages. It controls some layout
@@ -1125,3 +1125,11 @@ throw new Error('AdminLTE requires jQuery')
   })
 
 }(jQuery)
+
+
+
+//js cho phần alertbox
+$(function () {
+    $('#alertbox').removeClass('hide');
+    $('#alertbox').delay(5000).slideUp(1000);
+});

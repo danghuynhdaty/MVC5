@@ -10,7 +10,7 @@
 }
 
 @section jsFooter{
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
     <script src="~/Assets/Admin/JS/Controller/accountController.js"></script>
 }
 
@@ -66,8 +66,25 @@
                             <td>@item.Name</td>
                             <td>@item.Email</td>
                             <td>@item.Phone</td>
-                            <td>@item.Address</td>
-                            <td><a href="#" class="btnChangeStatus label label-success" data-id="@item.ID">@(item.Status == true ? "Kích hoạt" : "Khóa")</a></td>
+                            <td>@item.Address</td>                            
+                            <td>
+                                    @Html.ActionLink((@item.Status == true ? "Kích hoạt" : "Khóa"),"ChangeStatus","Account",new { id = @item.ID},new { @class=(@item.Status == true ? "btnchangestatus label label-success" : "btnchangestatus label label-danger") , @data_id=@item.ID  })
+                                </td>
+                            @{
+                                #region các cách dùng ajax
+/*
+ @*<td>
+     @Ajax.ActionLink((@item.Status == true ? "Kích hoạt" : "Khóa"), "ChangeStatus", new { id = item.ID }, new AjaxOptions
+{
+    HttpMethod = "POST",
+    Confirm = (@item.Status == true ? "Bạn muốn khóa tài khoản này?" : "Bạn muốn kích hoạt tài khoản này?"),
+    OnSuccess = "changeStatusSuccess(" + @item.ID + ");"
+}, new { @id = "status_" + item.ID, @class = (@item.Status == true ? "label label-success" : "label label-danger") })
+ </td>*@
+ */
+#endregion
+                            }
+                            
                             <td>
                                 @Html.ActionLink("Chi tiết", "Details", new { id = item.ID }) |
                                 @Html.ActionLink("Sửa", "Edit", new { id = item.ID }) |
@@ -75,14 +92,12 @@
                            {
                                HttpMethod = "Delete",
                                Confirm = "Bạn muốn xóa tài khoản này?",
-                               // dùng ajax thì browser nó sẽ không load lại trang
                                OnSuccess = "$('#row_" + @item.ID + "').remove()",
-                               //OnComplete = "window.location.replace('" + @Url.Action("Index", "Account") + "');"
-                           }, new { @class = "itemDelete" })
+                           })
 
                             </td>
                         </tr>
-                    }
+                                }
                 </table>
             </div>
             <!-- /.box-body -->
@@ -94,5 +109,3 @@
     <!-- /.box -->
 
 </div>
-
-

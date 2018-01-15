@@ -14,7 +14,6 @@ namespace OnlineShop.Areas.Admin.Controllers
     {
         // GET: Admin/Account
         public ActionResult Index(int? page, string searchString, string currentFilter, string sortOrder)
-
         {
             // lấy sort order đẩy xuống view
             ViewBag.CurrentSort = sortOrder;
@@ -61,18 +60,28 @@ namespace OnlineShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                //mã hóa mật khẩu thành md5
-                account.PassWord = Encryptor.MD5Hash(account.PassWord);
-                account.CreatedDate = DateTime.Now;
-                long id = AccountDAO.Instance.Insert(account);
-                if (id > 0)
+                var model = AccountDAO.Instance.GetAccountByUserName(account.UserName);
+                if (model == null)
                 {
-                    return RedirectToAction("Index", "Account");
+                    //mã hóa mật khẩu thành md5
+                    account.PassWord = Encryptor.MD5Hash(account.PassWord);
+                    account.CreatedDate = DateTime.Now;
+                    long id = AccountDAO.Instance.Insert(account);
+                    if (id > 0)
+                    {
+                        SetMessageBox("Thêm tài khoản thành công","success");
+                        return RedirectToAction("Index", "Account");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Thêm tài khoản thất bại!");
+                    }
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Thêm tài khoản thất bại!");
+                    ModelState.AddModelError("", "Tên đăng nhập đã tồn tại!");
                 }
+                
             }
             return View();
         }
