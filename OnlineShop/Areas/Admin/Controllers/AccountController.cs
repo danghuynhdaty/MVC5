@@ -1,30 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using Model.DAO;
 using Model.EF;
-using Model.DAO;
-using OnlineShop.Common;
 using Model.ViewModels.Account;
+using OnlineShop.Common;
+using System;
+using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace OnlineShop.Areas.Admin.Controllers
 {
     public class AccountController : BaseController
     {
+        #region Index Action
+
         // GET: Admin/Account
         public ActionResult Index(int? page, string searchString, string currentFilter, string sortOrder)
         {
             // lấy sort order đẩy xuống view
             ViewBag.CurrentSort = sortOrder;
 
-            //kiểm tra sort xem có trùng với trường hợp nào không?
-            // đẩy xuồng view thông qa viewbag
-            ViewBag.IDSortPara = string.IsNullOrEmpty(sortOrder) ? "ID_Desc" : "";
-            ViewBag.UserNameSortPara = sortOrder == "UserName" ? "UserName_Desc" : "UserName";
-            ViewBag.NameSortPara = sortOrder == "Name" ? "Name_Desc" : "Name";
-            ViewBag.EmailSortPara = sortOrder == "Email" ? "Email_Desc" : "Email";
-            ViewBag.StatusSortPara = sortOrder == "Status" ? "Status_Desc" : "Status";
+            if (sortOrder == null)
+            {
+                ViewBag.IDSortPara = "ID_Desc";
+                ViewBag.UserNameSortPara = "UserName_Desc";
+                ViewBag.NameSortPara = "Name_Desc";
+                ViewBag.EmailSortPara = "Email_Desc";
+                ViewBag.StatusSortPara = "Status_Desc";
+            }
+            else
+            {
+                //kiểm tra sort xem có trùng với trường hợp nào không?
+                // đẩy xuồng view thông qa viewbag
+                ViewBag.IDSortPara = string.IsNullOrEmpty(sortOrder) ? "ID_Desc" : "";
+                ViewBag.UserNameSortPara = sortOrder == "UserName" ? "UserName_Desc" : "UserName";
+                ViewBag.NameSortPara = sortOrder == "Name" ? "Name_Desc" : "Name";
+                ViewBag.EmailSortPara = sortOrder == "Email" ? "Email_Desc" : "Email";
+                ViewBag.StatusSortPara = sortOrder == "Status" ? "Status_Desc" : "Status";
+            }
 
             // nếu searchString == null thì gán bằng currentfilter khi chuyển trang k bị mất searchString
             if (searchString != null)
@@ -38,7 +49,6 @@ namespace OnlineShop.Areas.Admin.Controllers
 
             ViewBag.CurrentFilter = searchString;
 
-
             // lấy ra page từ url, nếu không tồn tại mặc định là 1
             int pageNumber = page ?? 1;
             //pageSize của mỗi page
@@ -47,12 +57,15 @@ namespace OnlineShop.Areas.Admin.Controllers
             return View(model);
         }
 
+        #endregion Index Action
+
+        #region Create Action
+
         [HttpGet]
         public ActionResult Create()
         {
             return View();
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -69,7 +82,7 @@ namespace OnlineShop.Areas.Admin.Controllers
                     long id = AccountDAO.Instance.Insert(account);
                     if (id > 0)
                     {
-                        SetMessageBox("Thêm tài khoản thành công","success");
+                        SetModalBox("Thêm tài khoản thành công", "success");
                         return RedirectToAction("Index", "Account");
                     }
                     else
@@ -81,10 +94,13 @@ namespace OnlineShop.Areas.Admin.Controllers
                 {
                     ModelState.AddModelError("", "Tên đăng nhập đã tồn tại!");
                 }
-                
             }
             return View();
         }
+
+        #endregion Create Action
+
+        #region Edit
 
         [HttpGet]
         public ActionResult Edit(int id)
@@ -111,6 +127,10 @@ namespace OnlineShop.Areas.Admin.Controllers
             return View();
         }
 
+        #endregion Edit
+
+        #region DeleteAction
+
         [HttpDelete]
         public ActionResult Delete(int id)
         {
@@ -125,6 +145,9 @@ namespace OnlineShop.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+        #endregion DeleteAction
+
+        #region Detail Action
 
         [HttpGet]
         public ActionResult Details(int id)
@@ -133,13 +156,17 @@ namespace OnlineShop.Areas.Admin.Controllers
             return View(model);
         }
 
+        #endregion Detail Action
+
+        #region ChangeStatus Action
+
         [HttpPost]
         public JsonResult ChangeStatus(long id)
         {
             var result = AccountDAO.Instance.ChangeStatus(id);
-            return Json(result,JsonRequestBehavior.AllowGet);
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-
+        #endregion ChangeStatus Action
     }
 }

@@ -24,6 +24,7 @@
 
         [StringLength(50)]
         [Display(Name = "Tên người dùng")]
+        [Required(ErrorMessage = "Tên người dùng không được rỗng")]
         public string Name { get; set; }
 
         [StringLength(250)]
@@ -40,17 +41,17 @@
         [Display(Name = "Trạng thái")]
         public bool Status { get; set; }
 
-        [Display(Name = "Tạo ngày")]
+        [Display(Name = "Ngày tạo")]
         public DateTime? CreatedDate { get; set; }
 
         [StringLength(250)]
         [Display(Name = "Người tạo")]
         public string CreatedBy { get; set; }
 
-        [Display(Name = "Chỉnh sửa ngày")]
+        [Display(Name = "Ngày chỉnh sửa")]
         public DateTime? ModifiedDate { get; set; }
 
-        [Display(Name = "Người chỉnh sửa")]
+        [Display(Name = "Chỉnh sửa bởi")]
         public long? ModifiedBy { get; set; }
     }
 }

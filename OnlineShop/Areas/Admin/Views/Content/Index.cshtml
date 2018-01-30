@@ -1,5 +1,5 @@
-﻿@model Model.EF.Content
-
+﻿@model PagedList.IPagedList<Model.EF.Content>
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Danh sách bài viết";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
@@ -9,3 +9,86 @@
     Danh sách bài viết
 }
 
+@section jsFooter{
+    <script src="~/Assets/Admin/JS/Controller/contentController.js"></script>
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            @using (Html.BeginForm("Index", "Content", FormMethod.Get))
+            {
+                <div class="box-header">
+                    <h3 class="box-title">Danh sách bài viết</h3>
+
+                    <div class="box-tools pull-right">
+
+                        <div class="input-group input-group-sm col-md-4 pull-right col-xs-offset-1">
+                            @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control pull-right", @placeholder = "Tìm kiếm" })
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                            </div>
+
+                        </div>
+
+                        <div class="pull-right">
+                            <a href="/Admin/Content/Create" class="btn btn-info btn-sm"> <i class="fa  fa-user-plus"></i>Thêm mới</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            }
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover table-bordered">
+                    <tr>
+                        <th>
+                            @Html.ActionLink("ID", "Index", new { sortOrder = ViewBag.IDSortPara })
+                        </th>
+                        <th>
+                            @Html.ActionLink("Tên bài viết", "Index", new { sortOrder = ViewBag.NameSortPara })
+                        </th>
+                        <th>
+                            @Html.ActionLink("Mô tả", "Index", new { sortOrder = ViewBag.DescriptionSortPara })
+                        </th>
+                        <th>
+                            @Html.ActionLink("Trạng thái", "Index", new { sortOrder = ViewBag.StatusSortPara })
+                        </th>
+                        <th>Chức năng</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr id="row_@item.ID" class="">
+                            <td>@item.ID</td>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td>
+                                @Html.ActionLink((@item.Status == true ? "Kích hoạt" : "Khóa"), "ChangeStatus", "Content", new { id = @item.ID }, new { @class = (@item.Status == true ? "btnchangestatus label label-success" : "btnchangestatus label label-danger"), @data_id = @item.ID })
+                            </td>
+                            
+
+                            <td>
+                                @Html.ActionLink("Chi tiết", "Detail", new { ID = item.ID }) |
+                                @Html.ActionLink("Sửa", "Edit", new { ID = item.ID }) |
+                                @Ajax.ActionLink("Xóa", "Delete", "Content", new { id = item.ID }, new AjaxOptions
+                                {
+                                    HttpMethod = "Delete",
+                                    Confirm = "Bạn muốn xóa bài viết này?",
+                                    OnSuccess = "$('#row_" + @item.ID + "').remove()",
+                                })
+
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+            <!-- /.box-body -->
+            <!-- /.box-footer -->
+        </div>
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) của @Model.PageCount
+    </div>
+    <!-- /.box -->
+
+</div>

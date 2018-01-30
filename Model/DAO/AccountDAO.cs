@@ -1,21 +1,17 @@
-﻿using Model.Common;
-using Model.EF;
+﻿using Model.EF;
 using Model.ViewModels.Account;
 using PagedList;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model.DAO
 {
     public class AccountDAO
     {
-
         private static AccountDAO instance;
         private OnlineShopDbContext db;
+
         public static AccountDAO Instance
         {
             get
@@ -40,7 +36,6 @@ namespace Model.DAO
             return entity.ID;
         }
 
-
         public void Update(AccountEditByAdmin entity)
         {
             try
@@ -53,18 +48,13 @@ namespace Model.DAO
                 account.Status = entity.Status;
                 account.ModifiedBy = entity.ModifiedBy;
 
-
-
                 db.SaveChanges();
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
-
-
 
         /// <summary>
         /// result = 0 tài khoản không tồn tại
@@ -113,9 +103,6 @@ namespace Model.DAO
             return db.Accounts.Find(id);
         }
 
-
-
-
         /// <summary>
         /// lấy danh sách tất cả account
         /// </summary>
@@ -123,12 +110,10 @@ namespace Model.DAO
         public IEnumerable<Account> GetAllAccountPaged(int pageNumber, int pageSize, string searchString, string sortOrder)
         {
             //lấy ra account trừ admin
-            var model = from s 
+            var model = from s
                         in db.Accounts
                         where s.UserName != "daty"
                         select s;
-
-
 
             if (!string.IsNullOrEmpty(searchString))
             {
@@ -139,27 +124,35 @@ namespace Model.DAO
                 case "Name_Desc":
                     model = model.OrderByDescending(p => p.Name);
                     break;
+
                 case "UserName_Desc":
                     model = model.OrderByDescending(p => p.UserName);
                     break;
+
                 case "UserName":
                     model = model.OrderBy(p => p.UserName);
                     break;
+
                 case "Email":
                     model = model.OrderBy(p => p.Email);
                     break;
+
                 case "Email_Desc":
                     model = model.OrderByDescending(p => p.Email);
                     break;
+
                 case "Status":
                     model = model.OrderBy(p => p.Status);
                     break;
+
                 case "Status_Desc":
                     model = model.OrderByDescending(p => p.Status);
                     break;
+
                 case "ID_Desc":
                     model = model.OrderByDescending(p => p.ID);
                     break;
+
                 default:
                     model = model.OrderBy(p => p.ID);
                     break;
@@ -174,7 +167,7 @@ namespace Model.DAO
         /// <returns></returns>
         public bool ChangeStatus(long id)
         {
-            //Lấy ra account cần đổi status 
+            //Lấy ra account cần đổi status
             var account = db.Accounts.Find(id);
 
             //thay đổi status của account
@@ -182,10 +175,8 @@ namespace Model.DAO
 
             //lưu thay đổi xuống database
             db.SaveChanges();
-        
+
             return account.Status;
         }
-
-
     }
 }

@@ -1131,5 +1131,5 @@ throw new Error('AdminLTE requires jQuery')
 //js cho phần alertbox
 $(function () {
     $('#alertbox').removeClass('hide');
-    $('#alertbox').delay(5000).slideUp(1000);
+    $('#alertbox').delay(4000).slideUp(1000);
 });

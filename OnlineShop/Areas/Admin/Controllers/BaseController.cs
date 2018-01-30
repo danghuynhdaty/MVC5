@@ -23,21 +23,25 @@ namespace OnlineShop.Areas.Admin.Controllers
             base.OnActionExecuting(filterContext);
         }
 
-        protected void SetMessageBox(string message, string alertType)
+        protected void SetModalBox(string message, string alertType)
         {
             TempData["AlertMessage"] = message;
-            if (alertType == "success")
+            switch (alertType)
             {
-                TempData["AlertType"] = "alert-success";
+                case "warning":
+                    TempData["AlertType"] = "alert-warning";
+                    break;
+                case "error":
+                    TempData["AlertType"] = "alert-danger";
+                    break;
+                case "info":
+                    TempData["AlertType"] = "alert-info";
+                    break;
+                default:
+                    TempData["AlertType"] = "alert-success";
+                    break; 
             }
-            else if (alertType == "warning")
-            {
-                TempData["AlertType"] = "alert-warning";
-            }
-            else if (alertType == "error")
-            {
-                TempData["AlertType"] = "alert-danger";
-            }
+            
         }
 
     }
