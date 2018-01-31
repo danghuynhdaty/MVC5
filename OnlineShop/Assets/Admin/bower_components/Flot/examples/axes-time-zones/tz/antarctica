@@ -139,7 +139,7 @@ Rule	ATAQ	2008	max	-	Apr	Sun>=1	2:00s	0	-
 # - Mawson station stays on UTC+5.
 #
 # In addition to the Rule changes for Casey/Davis, it means that Macquarie
-# will no longer be like Hobart and will have to have its own Zone created.
+# will no inter be like Hobart and will have to have its own Zone created.
 #
 # Background:
 # <a href="http://www.timeanddate.com/news/time/antartica-time-changes-2010.html">
@@ -400,7 +400,7 @@ Zone Antarctica/McMurdo	0	-	zzz	1956
 #
 # From Susan Smith
 # http://www.cybertours.com/whs/pole10.html
-# (1995-11-13 16:24:56 +1300, no longer available):
+# (1995-11-13 16:24:56 +1300, no inter available):
 # We use the same time as McMurdo does.
 # And they use the same time as Christchurch, NZ does....
 # One last quirk about South Pole time.

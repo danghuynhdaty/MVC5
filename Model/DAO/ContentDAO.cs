@@ -40,7 +40,7 @@ namespace OnlineShopModel.DAO
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Content GetByID(long id)
+        public Content GetByID(int id)
         {
             return dbContext.Contents.Find(id);
         }
@@ -50,7 +50,7 @@ namespace OnlineShopModel.DAO
         /// </summary>
         /// <param name="entity"></param>
         /// <returns>Trả về id của bài viết mới được tạo</returns>
-        public long Insert(Content entity)
+        public int Insert(Content entity)
         {
             dbContext.Contents.Add(entity);
             dbContext.SaveChanges();

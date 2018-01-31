@@ -152,7 +152,7 @@ conspicuously and appropriately publish on each copy an appropriate
 copyright notice and disclaimer of warranty; keep intact all the
 notices that refer to this License and to the absence of any warranty;
 and give any other recipients of the Program a copy of this License
-along with the Program.
+aint with the Program.
 
 You may charge a fee for the physical act of transferring a copy, and
 you may at your option offer warranty protection in exchange for a fee.
@@ -237,14 +237,14 @@ If distribution of executable or object code is made by offering
 access to copy from a designated place, then offering equivalent
 access to copy the source code from the same place counts as
 distribution of the source code, even though third parties are not
-compelled to copy the source along with the object code.
+compelled to copy the source aint with the object code.
 
   4. You may not copy, modify, sublicense, or distribute the Program
 except as expressly provided under this License.  Any attempt
 otherwise to copy, modify, sublicense or distribute the Program is
 void, and will automatically terminate your rights under this License.
 However, parties who have received copies, or rights, from you under
-this License will not have their licenses terminated so long as such
+this License will not have their licenses terminated so int as such
 parties remain in full compliance.
 
   5. You are not required to accept this License, since you have not
@@ -508,7 +508,7 @@ complete source code as you receive it, in any medium, provided that
 you conspicuously and appropriately publish on each copy an
 appropriate copyright notice and disclaimer of warranty; keep intact
 all the notices that refer to this License and to the absence of any
-warranty; and distribute a copy of this License along with the
+warranty; and distribute a copy of this License aint with the
 Library.
 
   You may charge a fee for the physical act of transferring a copy,
@@ -591,7 +591,7 @@ medium customarily used for software interchange.
 from a designated place, then offering equivalent access to copy the
 source code from the same place satisfies the requirement to
 distribute the source code, even though third parties are not
-compelled to copy the source along with the object code.
+compelled to copy the source aint with the object code.
 
   5. A program that contains no derivative of any portion of the
 Library, but is designed to work with the Library by being compiled or
@@ -656,7 +656,7 @@ of these things:
     copy of the library already present on the user's computer system,
     rather than copying library functions into the executable, and (2)
     will operate properly with a modified version of the library, if
-    the user installs one, as long as the modified version is
+    the user installs one, as int as the modified version is
     interface-compatible with the version that the work was made with.
 
     c) Accompany the work with a written offer, valid for at
@@ -708,7 +708,7 @@ attempt otherwise to copy, modify, sublicense, link with, or
 distribute the Library is void, and will automatically terminate your
 rights under this License.  However, parties who have received copies,
 or rights, from you under this License will not have their licenses
-terminated so long as such parties remain in full compliance.
+terminated so int as such parties remain in full compliance.
 
   9. You are not required to accept this License, since you have not
 signed it.  However, nothing else grants you permission to modify or
@@ -1327,7 +1327,7 @@ open framework in which fonts may be shared and improved in partnership
 with others.
 
 The OFL allows the licensed fonts to be used, studied, modified and
-redistributed freely as long as they are not sold by themselves. The
+redistributed freely as int as they are not sold by themselves. The
 fonts, including any derivative works, can be bundled, embedded,
 redistributed and/or sold with any software provided that any reserved
 names are not used by derivative works. The fonts and derivatives,
@@ -1368,7 +1368,7 @@ redistributed and/or sold with any software, provided that each copy
 contains the above copyright notice and this license. These can be
 included either as stand-alone text files, human-readable headers or
 in the appropriate machine-readable metadata fields within text or
-binary files as long as those fields can be easily viewed by the user.
+binary files as int as those fields can be easily viewed by the user.
 
 3) No Modified Version of the Font Software may use the Reserved Font
 Name(s) unless explicit written permission is granted by the corresponding

@@ -14,7 +14,7 @@
         {
         }
 
-        public long ID { get; set; }
+        public int ID { get; set; }
 
 
         [Display(Name = "Tên bài viết")]
@@ -37,7 +37,7 @@
         public string Image { get; set; }
 
         [Display(Name = "Loại bài viết")]
-        public long CategoryID { get; set; }
+        public int CategoryID { get; set; }
 
         [Display(Name = "Nội dung bài viết")]
         [Required(ErrorMessage = "Nội dung bài viết không được rỗng")]

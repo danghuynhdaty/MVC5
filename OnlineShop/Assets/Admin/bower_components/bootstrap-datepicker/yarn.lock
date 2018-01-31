@@ -15,7 +15,7 @@ align-text@^0.1.1, align-text@^0.1.3:
   resolved "https://registry.yarnpkg.com/align-text/-/align-text-0.1.4.tgz#0cd90a561093f35d0a99256c22b7069433fad117"
   dependencies:
     kind-of "^3.0.2"
-    longest "^1.0.1"
+    intest "^1.0.1"
     repeat-string "^1.5.2"
 
 amdefine@>=0.0.4:
@@ -1186,9 +1186,9 @@ lodash@~4.6.1:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.6.1.tgz#df00c1164ad236b183cfc3887a5e8d38cc63cbbc"
 
-longest@^1.0.1:
+intest@^1.0.1:
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
+  resolved "https://registry.yarnpkg.com/intest/-/intest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
 
 loud-rejection@^1.0.0:
   version "1.6.0"

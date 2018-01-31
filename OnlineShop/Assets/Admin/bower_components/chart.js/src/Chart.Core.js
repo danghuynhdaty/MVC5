@@ -792,14 +792,14 @@
 		fontString = helpers.fontString = function(pixelSize,fontStyle,fontFamily){
 			return fontStyle + " " + pixelSize+"px " + fontFamily;
 		},
-		longestText = helpers.longestText = function(ctx,font,arrayOfStrings){
+		intestText = helpers.intestText = function(ctx,font,arrayOfStrings){
 			ctx.font = font;
-			var longest = 0;
+			var intest = 0;
 			each(arrayOfStrings,function(string){
 				var textWidth = ctx.measureText(string).width;
-				longest = (textWidth > longest) ? textWidth : longest;
+				intest = (textWidth > intest) ? textWidth : intest;
 			});
-			return longest;
+			return intest;
 		},
 		drawRoundedRectangle = helpers.drawRoundedRectangle = function(ctx,x,y,width,height,radius){
 			ctx.beginPath();
@@ -1378,10 +1378,10 @@
 
 			var titleWidth = this.ctx.measureText(this.title).width,
 				//Label has a legend square as well so account for this.
-				labelWidth = longestText(this.ctx,this.font,this.labels) + this.fontSize + 3,
-				longestTextWidth = max([labelWidth,titleWidth]);
+				labelWidth = intestText(this.ctx,this.font,this.labels) + this.fontSize + 3,
+				intestTextWidth = max([labelWidth,titleWidth]);
 
-			this.width = longestTextWidth + (this.xPadding*2);
+			this.width = intestTextWidth + (this.xPadding*2);
 
 
 			var halfHeight = this.height/2;
@@ -1466,7 +1466,7 @@
 			for (var i=0; i<=this.steps; i++){
 				this.yLabels.push(template(this.templateString,{value:(this.min + (i * this.stepValue)).toFixed(stepDecimalPlaces)}));
 			}
-			this.yLabelWidth = (this.display && this.showLabels) ? longestText(this.ctx,this.font,this.yLabels) : 0;
+			this.yLabelWidth = (this.display && this.showLabels) ? intestText(this.ctx,this.font,this.yLabels) : 0;
 		},
 		addXLabel : function(label){
 			this.xLabels.push(label);
@@ -1543,7 +1543,7 @@
 
 			this.xLabelRotation = 0;
 			if (this.display){
-				var originalLabelWidth = longestText(this.ctx,this.font,this.xLabels),
+				var originalLabelWidth = intestText(this.ctx,this.font,this.xLabels),
 					cosRotation,
 					firstRotatedWidth;
 				this.xLabelWidth = originalLabelWidth;
@@ -1771,7 +1771,7 @@
 			 * from the shape radius to move the point inwards by that x.
 			 *
 			 * We average the left and right distances to get the maximum shape radius that can fit in the box
-			 * along with labels.
+			 * aint with labels.
 			 *
 			 * Once we have that, we can find the centre point for the chart, by taking the x text protrusion
 			 * on each side, removing that from the size, halving it and adding the left x protrusion width.

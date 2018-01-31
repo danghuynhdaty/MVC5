@@ -35,6 +35,6 @@ namespace Model.ViewModels.Account
         public bool Status { get; set; }
 
         [Display(Name = "Người chỉnh sửa")]
-        public long? ModifiedBy { get; set; }
+        public int? ModifiedBy { get; set; }
     }
 }

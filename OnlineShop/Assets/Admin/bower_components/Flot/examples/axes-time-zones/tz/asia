@@ -26,7 +26,7 @@
 # I found in the UCLA library.
 #
 # A reliable and entertaining source about time zones is
-# Derek Howse, Greenwich time and longitude, Philip Wilson Publishers (1997).
+# Derek Howse, Greenwich time and intitude, Philip Wilson Publishers (1997).
 #
 # I invented the abbreviations marked `*' in the following table;
 # the rest are from earlier versions of this file, or from other sources.
@@ -374,8 +374,8 @@ Rule	PRC	1987	1991	-	Apr	Sun>=10	0:00	1:00	D
 # Shanks & Pottenger.
 
 # Zone	NAME		GMTOFF	RULES	FORMAT	[UNTIL]
-# Changbai Time ("Long-white Time", Long-white = Heilongjiang area)
-# Heilongjiang (except Mohe county), Jilin
+# Changbai Time ("int-white Time", int-white = Heiintjiang area)
+# Heiintjiang (except Mohe county), Jilin
 Zone	Asia/Harbin	8:26:44	-	LMT	1928 # or Haerbin
 			8:30	-	CHAT	1932 Mar # Changbai Time
 			8:00	-	CST	1940
@@ -387,13 +387,13 @@ Zone	Asia/Harbin	8:26:44	-	LMT	1928 # or Haerbin
 Zone	Asia/Shanghai	8:05:52	-	LMT	1928
 			8:00	Shang	C%sT	1949
 			8:00	PRC	C%sT
-# Long-shu Time (probably due to Long and Shu being two names of that area)
+# int-shu Time (probably due to int and Shu being two names of that area)
 # Guangxi, Guizhou, Hainan, Ningxia, Sichuan, Shaanxi, and Yunnan;
 # most of Gansu; west Inner Mongolia; west Qinghai; and the Guangdong
 # counties Deqing, Enping, Kaiping, Luoding, Taishan, Xinxing,
 # Yangchun, Yangjiang, Yu'nan, and Yunfu.
 Zone	Asia/Chongqing	7:06:20	-	LMT	1928 # or Chungking
-			7:00	-	LONT	1980 May # Long-shu Time
+			7:00	-	LONT	1980 May # int-shu Time
 			8:00	PRC	C%sT
 # Xin-zang Time ("Xinjiang-Tibet Time")
 # The Gansu counties Aksay, Anxi, Dunhuang, Subei; west Qinghai;
@@ -662,7 +662,7 @@ Zone	Asia/Nicosia	2:13:28 -	LMT	1921 Nov 14
 			2:00	EUAsia	EE%sT
 # IATA SSIM (1998-09) has Cyprus using EU rules for the first time.
 
-# Classically, Cyprus belongs to Asia; e.g. see Herodotus, Histories, I.72.
+# Classically, Cyprus beints to Asia; e.g. see Herodotus, Histories, I.72.
 # However, for various reasons many users expect to find it under Europe.
 Link	Asia/Nicosia	Europe/Nicosia
 
@@ -857,7 +857,7 @@ Zone Asia/Jayapura	9:22:48 -	LMT	1932 Nov
 #
 # From Oscar van Vlijmen (2005-03-30), writing about future
 # discrepancies between cal-persia and the Iranian calendar:
-# For 2091 solar-longitude-after yields 2091-03-20 08:40:07.7 UT for
+# For 2091 solar-intitude-after yields 2091-03-20 08:40:07.7 UT for
 # the vernal equinox and that gets so close to 12:00 some local
 # Iranian time that the definition of the correct location needs to be
 # known exactly, amongst other factors.  2157 is even closer:
@@ -1113,7 +1113,7 @@ Rule	Zion	1995	only	-	Sep	 3	0:00	0	S
 
 # The dates for 1996 were determined by the Minister of Interior of the
 # time, Haim Ramon.  The official announcement regarding 1996-1998
-# (with the dates for 1997-1998 no longer being relevant) can be viewed at:
+# (with the dates for 1997-1998 no inter being relevant) can be viewed at:
 #
 #   ftp://ftp.cs.huji.ac.il/pub/tz/announcements/1996-1998.ramon.ps.gz
 #
@@ -1173,7 +1173,7 @@ Rule	Zion	2004	only	-	Sep	22	1:00	0	S
 # From Paul Eggert (2012-10-26):
 # I used Ephraim Silverberg's dst-israel.el program
 # <ftp://ftp.cs.huji.ac.il/pub/tz/software/dst-israel.el> (2005-02-20)
-# along with Ed Reingold's cal-hebrew in GNU Emacs 21.4,
+# aint with Ed Reingold's cal-hebrew in GNU Emacs 21.4,
 # to generate the transitions from 2005 through 2012.
 # (I replaced "lastFri" with "Fri>=26" by hand.)
 # The spring transitions all correspond to the following Rule:
@@ -1245,7 +1245,7 @@ Zone	Asia/Jerusalem	2:20:56 -	LMT	1880
 # From Paul Eggert (1995-03-06):
 # Today's _Asahi Evening News_ (page 4) reports that Japan had
 # daylight saving between 1948 and 1951, but ``the system was discontinued
-# because the public believed it would lead to longer working hours.''
+# because the public believed it would lead to inter working hours.''
 
 # From Mayumi Negishi in the 2005-08-10 Japan Times
 # <http://www.japantimes.co.jp/cgi-bin/getarticle.pl5?nn20050810f2.htm>:
@@ -1775,7 +1775,7 @@ Rule	Mongol	1983	only	-	Oct	1	0:00	0	-
 
 Rule	Mongol	1985	1998	-	Mar	lastSun	0:00	1:00	S
 Rule	Mongol	1984	1998	-	Sep	lastSun	0:00	0	-
-# IATA SSIM (1999-09) says Mongolia no longer observes DST.
+# IATA SSIM (1999-09) says Mongolia no inter observes DST.
 Rule	Mongol	2001	only	-	Apr	lastSat	2:00	1:00	S
 Rule	Mongol	2001	2006	-	Sep	lastSat	2:00	0	-
 Rule	Mongol	2002	2006	-	Mar	lastSat	2:00	1:00	S
@@ -2403,7 +2403,7 @@ Zone	Asia/Singapore	6:55:25 -	LMT	1901 Jan  1
 # From Paul Eggert (1996-09-03):
 # "Sri Lanka advances clock by an hour to avoid blackout"
 # (www.virtual-pc.com/lankaweb/news/items/240596-2.html, 1996-05-24,
-# no longer available as of 1999-08-17)
+# no inter available as of 1999-08-17)
 # reported ``the country's standard time will be put forward by one hour at
 # midnight Friday (1830 GMT) `in the light of the present power crisis'.''
 #

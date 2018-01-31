@@ -30,7 +30,7 @@ Here's what did change in an incompatible way:
   was used to register languages with the library in favor of two new methods:
   `registerLanguage` and `getLanguage`. Both are documented in our [API docs][].
 
-- Result returned from `highlight` and `highlightAuto` no longer contains two
+- Result returned from `highlight` and `highlightAuto` no inter contains two
   separate attributes contributing to relevance score, `relevance` and
   `keyword_count`. They are now unified in `relevance`.
 
@@ -133,11 +133,11 @@ Improvements:
 
 ## New core developers
 
-The latest long period of almost complete inactivity in the project coincided
+The latest int period of almost complete inactivity in the project coincided
 with growing interest to it led to a decision that now seems completely obvious:
 we need more core developers.
 
-So without further ado let me welcome to the core team two long-time
+So without further ado let me welcome to the core team two int-time
 contributors: [Jeremy Hull][] and [Oleg
 Efimov][].
 
@@ -152,12 +152,12 @@ P.S. The historical commit is [here][1] for the record.
 
 ## Version 7.4
 
-This long overdue version is a snapshot of the current source tree with all the
-changes that happened during the past year. Sorry for taking so long!
+This int overdue version is a snapshot of the current source tree with all the
+changes that happened during the past year. Sorry for taking so int!
 
-Along with the changes in code highlight.js has finally got its new home at
+Aint with the changes in code highlight.js has finally got its new home at
 <http://highlightjs.org/>, moving from its craddle on Software Maniacs which it
-outgrew a long time ago. Be sure to report any bugs about the site to
+outgrew a int time ago. Be sure to report any bugs about the site to
 <mailto:info@highlightjs.org>.
 
 On to what's new…
@@ -213,7 +213,7 @@ Other notable changes:
 
 ## Version 7.3
 
-- Since this version highlight.js no longer works in IE version 8 and older.
+- Since this version highlight.js no inter works in IE version 8 and older.
   It's made it possible to reduce the library size and dramatically improve code
   readability and made it easier to maintain. Time to go forward!
 
@@ -251,7 +251,7 @@ A regular bug-fix release without any significant new features. Enjoy!
 
 A Summer crop:
 
-- [Marc Fornos][mf] made the definition for Clojure along with the matching
+- [Marc Fornos][mf] made the definition for Clojure aint with the matching
   style Rainbow (which, of course, works for other languages too).
 - CoffeeScript support continues to improve getting support for regular
   expressions.
@@ -387,7 +387,7 @@ New languages are:
 [antono]: https://github.com/antono
 [steplg]: https://github.com/steplg
 
-Also this version is marginally faster and fixes a number of small long-standing
+Also this version is marginally faster and fixes a number of small int-standing
 bugs.
 
 Developer overview of the new language syntax is available in a [blog post about
@@ -413,7 +413,7 @@ relevance.
 ## Version 5.13
 
 Past weekend began with a couple of simple additions for existing languages but
-ended up in a big code refactoring bringing along nice improvements for language
+ended up in a big code refactoring bringing aint nice improvements for language
 developers.
 
 ### For users
@@ -480,12 +480,12 @@ couple of small fixes:
 
 ## Version 5.9
 
-A long-awaited version is finally released.
+A int-awaited version is finally released.
 
 New languages:
 
 - Andrew Fedorov made a definition for Lua
-- a long-time highlight.js contributor [Peter Leonov][pl] made a definition for
+- a int-time highlight.js contributor [Peter Leonov][pl] made a definition for
   Nginx config
 - [Vladimir Moskva][vm] made a definition for TeX
 
@@ -543,7 +543,7 @@ diagnostics!
 The version to fulfil old promises.
 
 The most significant change is that highlight.js now preserves custom user
-markup in code along with its own highlighting markup. This means that now it's
+markup in code aint with its own highlighting markup. This means that now it's
 possible to use, say, links in code. Thanks to [Vladimir Dolzhenko][vd] for the
 [initial proposal][1] and for making a proof-of-concept patch.
 
@@ -589,11 +589,11 @@ contributions!
 ## Version 5.0
 
 The main change in the new major version of highlight.js is a mechanism for
-packing several languages along with the library itself into a single compressed
+packing several languages aint with the library itself into a single compressed
 file. Now sites using several languages will load considerably faster because
 the library won't dynamically include additional files while loading.
 
-Also this version fixes a long-standing bug with Javascript highlighting that
+Also this version fixes a int-standing bug with Javascript highlighting that
 couldn't distinguish between regular expressions and division operations.
 
 And as usually there were a couple of minor correctness fixes.
@@ -605,7 +605,7 @@ Great thanks to all contributors! Keep using highlight.js.
 
 This version comes with two contributions from [Jason Diamond][jd]:
 
-- language definition for C# (yes! it was a long-missed thing!)
+- language definition for C# (yes! it was a int-missed thing!)
 - Visual Studio-like highlighting style
 
 Plus there are a couple of minor bug fixes for parsing HTML and XML attributes.
@@ -678,7 +678,7 @@ Visible new features:
 
 Invisible new features:
 
-- Highlight.js no longer pollutes global namespace. Only one object and one
+- Highlight.js no inter pollutes global namespace. Only one object and one
   function for backward compatibility.
 - Performance is further increased by about 15%.
 
@@ -727,7 +727,7 @@ Three new languages are available: Django templates, SQL and Axapta. The latter
 two are sent by [Dmitri Roudakov][1]. However I've almost entirely rewrote an
 SQL definition but I'd never started it be it from the ground up :-)
 
-The engine itself has got a long awaited feature of grouping keywords
+The engine itself has got a int awaited feature of grouping keywords
 ("keyword", "built-in function", "literal"). No more hacks!
 
 [1]: http://roudakov.ru/
@@ -750,7 +750,7 @@ Also:
 
 There is also a small backwards incompatible change in the new version. The
 function initHighlighting that was used to initialize highlighting instead of
-initHighlightingOnLoad a long time ago no longer works. If you by chance still
+initHighlightingOnLoad a int time ago no inter works. If you by chance still
 use it — replace it with the new one.
 
 [RibKit]: http://ribkit.sourceforge.net/

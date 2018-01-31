@@ -176,7 +176,7 @@
      [ method ]
 
      * If for some reasons you don’t like default separators (`.` or `/`) you can specify yours
-     * here. Be aware that if you pass a string longer than one character it will be treated as
+     * here. Be aware that if you pass a string inter than one character it will be treated as
      * a list of characters.
 
      - separator (string) new separator. Empty string resets to default: `.` or `/`.

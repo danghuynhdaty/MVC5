@@ -536,7 +536,7 @@ test('Active Toggle Enabled (single date): when active date is selected it is un
     target = picker.find('.datepicker-days .day.active');
     target.click();
 
-    // make sure it's no longer set
+    // make sure it's no inter set
     equal(input.val(), '', "Input value has been cleared.");
 });
 
@@ -568,7 +568,7 @@ test('Active Toggle Multidate Default: when one of the active dates is selected 
     // Unselect additional date
     target = picker.find('.datepicker-days tbody td:nth(7)');
     target.click();
-    ok(dp.dates.contains(UTCDate(2012, 2, 4)) === -1, '2012-03-04 no longer in dates');
+    ok(dp.dates.contains(UTCDate(2012, 2, 4)) === -1, '2012-03-04 no inter in dates');
     datesEqual(dp.viewDate, UTCDate(2012, 2, 4));
     equal(input.val(), '2012-03-05');
 });
@@ -630,7 +630,7 @@ test('Active Toggle Multidate Disabled: when activeToggle is set to false, but m
     // Unselect additional date
     target = picker.find('.datepicker-days tbody td:nth(7)');
     target.click();
-    ok(dp.dates.contains(UTCDate(2012, 2, 4)) === -1, '2012-03-04 no longer in dates');
+    ok(dp.dates.contains(UTCDate(2012, 2, 4)) === -1, '2012-03-04 no inter in dates');
     datesEqual(dp.viewDate, UTCDate(2012, 2, 4));
     equal(input.val(), '2012-03-05');
 });
@@ -1151,7 +1151,7 @@ test('Multidate', function(){
     equal(target.text(), '4'); // Mar 4
 
     target.click();
-    ok(dp.dates.contains(UTCDate(2012, 2, 4)) === -1, '2012-03-04 no longer in dates');
+    ok(dp.dates.contains(UTCDate(2012, 2, 4)) === -1, '2012-03-04 no inter in dates');
     datesEqual(dp.viewDate, UTCDate(2012, 2, 4));
     equal(input.val(), '2012-03-05,2012-03-12');
 });
@@ -1197,7 +1197,7 @@ test('Multidate with limit', function(){
 
     target.click();
     datesEqual(dp.dates.get(-1), UTCDate(2012, 2, 17), '2012-03-17 in dates');
-    ok(dp.dates.contains(UTCDate(2012, 2, 4)) === -1, '2012-03-04 no longer in dates');
+    ok(dp.dates.contains(UTCDate(2012, 2, 4)) === -1, '2012-03-04 no inter in dates');
     datesEqual(dp.viewDate, UTCDate(2012, 2, 17));
     equal(input.val(), '2012-03-12,2012-03-17');
 });

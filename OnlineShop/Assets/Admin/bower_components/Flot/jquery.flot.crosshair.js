@@ -33,7 +33,7 @@ The plugin also adds four public methods:
 
   - lockCrosshair(pos)
 
-    Cause the crosshair to lock to the current location, no longer updating if
+    Cause the crosshair to lock to the current location, no inter updating if
     the user moves the mouse. Optionally supply a position (passed on to
     setCrosshair()) to move it to.
 

@@ -59,6 +59,7 @@
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\ContentDAO.cs" />
     <Compile Include="DAO\NewsCategoryDAO.cs" />
+    <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="EF\About.cs" />
     <Compile Include="EF\Account.cs" />
     <Compile Include="EF\CategoryNew.cs" />
@@ -79,6 +80,10 @@
     <Compile Include="Migrations\201801220428057_InitialProject.Designer.cs">
       <DependentUpon>201801220428057_InitialProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801301746161_ChangeLongToInt.cs" />
+    <Compile Include="Migrations\201801301746161_ChangeLongToInt.Designer.cs">
+      <DependentUpon>201801301746161_ChangeLongToInt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Account\AccountEditByAdmin.cs" />
@@ -92,6 +97,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801220428057_InitialProject.resx">
       <DependentUpon>201801220428057_InitialProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801301746161_ChangeLongToInt.resx">
+      <DependentUpon>201801301746161_ChangeLongToInt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

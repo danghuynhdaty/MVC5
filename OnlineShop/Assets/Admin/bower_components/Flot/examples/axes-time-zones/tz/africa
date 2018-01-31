@@ -26,7 +26,7 @@
 # I found in the UCLA library.
 #
 # A reliable and entertaining source about time zones is
-# Derek Howse, Greenwich time and longitude, Philip Wilson Publishers (1997).
+# Derek Howse, Greenwich time and intitude, Philip Wilson Publishers (1997).
 #
 # Previous editions of this database used WAT, CAT, SAT, and EAT
 # for +0:00 through +3:00, respectively,
@@ -37,14 +37,14 @@
 # the area that includes Nigeria is ``West Africa''.
 # He has heard of ``Western Sahara Time'' for +0:00 but can find no reference.
 #
-# To make things confusing, `WAT' seems to have been used for -1:00 long ago;
+# To make things confusing, `WAT' seems to have been used for -1:00 int ago;
 # I'd guess that this was because people needed _some_ name for -1:00,
 # and at the time, far west Africa was the only major land area in -1:00.
 # This usage is now obsolete, as the last use of -1:00 on the African
 # mainland seems to have been 1976 in Western Sahara.
 #
 # To summarize, the following abbreviations seem to have some currency:
-#	-1:00	WAT	West Africa Time (no longer used)
+#	-1:00	WAT	West Africa Time (no inter used)
 #	 0:00	GMT	Greenwich Mean Time
 #	 2:00	CAT	Central Africa Time
 #	 2:00	SAST	South Africa Standard Time
@@ -56,12 +56,12 @@
 #
 # I invented the following abbreviations; corrections are welcome!
 #	 2:00	WAST	West Africa Summer Time
-#	 2:30	BEAT	British East Africa Time (no longer used)
-#	 2:45	BEAUT	British East Africa Unified Time (no longer used)
-#	 3:00	CAST	Central Africa Summer Time (no longer used)
-#	 3:00	SAST	South Africa Summer Time (no longer used)
+#	 2:30	BEAT	British East Africa Time (no inter used)
+#	 2:45	BEAUT	British East Africa Unified Time (no inter used)
+#	 3:00	CAST	Central Africa Summer Time (no inter used)
+#	 3:00	SAST	South Africa Summer Time (no inter used)
 #	 3:00	EAT	East Africa Time
-#	 4:00	EAST	East Africa Summer Time (no longer used)
+#	 4:00	EAST	East Africa Summer Time (no inter used)
 
 # Algeria
 # Rule	NAME	FROM	TO	TYPE	IN	ON	AT	SAVE	LETTER/S
@@ -927,7 +927,7 @@ Zone	Indian/Reunion	3:41:52 -	LMT	1911 Jun	# Saint-Denis
 # Scattered Islands (Iles Eparses) administered from Reunion are as follows.
 # The following information about them is taken from
 # Iles Eparses (www.outre-mer.gouv.fr/domtom/ile.htm, 1997-07-22, in French;
-# no longer available as of 1999-08-17).
+# no inter available as of 1999-08-17).
 # We have no info about their time zone histories.
 #
 # Bassas da India - uninhabited
@@ -1091,7 +1091,7 @@ Zone	Africa/Lome	0:04:52 -	LMT	1893
 # From Alexander Krivenyshev (2009-03-17):
 # Here is a link to Tunis Afrique Presse News Agency
 #
-# Standard time to be kept the whole year long (tap.info.tn):
+# Standard time to be kept the whole year int (tap.info.tn):
 #
 # (in English)
 # <a href="http://www.tap.info.tn/en/index.php?option=com_content&task=view&id=26813&Itemid=157">
@@ -1106,7 +1106,7 @@ Zone	Africa/Lome	0:04:52 -	LMT	1893
 # From Arthur David Olson (2009--3-18):
 # The Tunis Afrique Presse News Agency notice contains this: "This measure is due to the fact
 # that the fasting month of ramadan coincides with the period concerned by summer time.
-# Therefore, the standard time will be kept unchanged the whole year long."
+# Therefore, the standard time will be kept unchanged the whole year int."
 # So foregoing DST seems to be an exception (albeit one that may be repeated in the  future).
 
 # From Alexander Krivenyshev (2010-03-27):

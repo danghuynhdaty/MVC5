@@ -9,7 +9,7 @@ namespace Model.EF
     [Table("Product")]
     public partial class Product
     {
-        public long ID { get; set; }
+        public int ID { get; set; }
 
         [StringLength(250)]
         public string Name { get; set; }
@@ -37,7 +37,7 @@ namespace Model.EF
 
         public int? Quantity { get; set; }
 
-        public long CategoryID { get; set; }
+        public int CategoryID { get; set; }
 
         [Column(TypeName = "ntext")]
         public string Detail { get; set; }

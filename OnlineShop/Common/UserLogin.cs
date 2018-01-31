@@ -8,7 +8,7 @@ namespace OnlineShop.Common
     [Serializable]
     public class UserLogin
     {
-        public UserLogin(long userID, string userName, bool rememerberMe)
+        public UserLogin(int userID, string userName, bool rememerberMe)
         {
             UserID = userID;
             UserName = userName;
@@ -16,7 +16,7 @@ namespace OnlineShop.Common
         }
 
 
-        public long UserID { get; set; }
+        public int UserID { get; set; }
         public string UserName { get; set; }
         public bool RememerberMe { get; set; }
     }

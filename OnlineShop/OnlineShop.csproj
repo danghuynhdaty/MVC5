@@ -193,6 +193,7 @@
     <Compile Include="Areas\Admin\Controllers\ContentController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Models\LoginModel.cs" />
     <Compile Include="Common\CommontConstant.cs" />
     <Compile Include="Common\Encryptor.cs" />
@@ -6797,6 +6798,7 @@
     <Content Include="Assets\Admin\dist\js\pages\dashboard2.js" />
     <Content Include="Assets\Admin\JS\Controller\accountController.js" />
     <Content Include="Assets\Admin\JS\Controller\contentController.js" />
+    <Content Include="Assets\Admin\JS\Controller\productController.js" />
     <Content Include="Assets\Admin\plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="Assets\Admin\plugins\bootstrap-slider\slider.css" />
     <Content Include="Assets\Admin\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.js" />
@@ -8648,6 +8650,9 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
@@ -8684,7 +8689,6 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <None Include="tsconfig.json" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

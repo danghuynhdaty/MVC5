@@ -8,10 +8,10 @@
 #
 # This file contains a table with the following columns:
 # 1.  ISO 3166 2-character country code.  See the file `iso3166.tab'.
-# 2.  Latitude and longitude of the zone's principal location
+# 2.  Latitude and intitude of the zone's principal location
 #     in ISO 6709 sign-degrees-minutes-seconds format,
 #     either +-DDMM+-DDDMM or +-DDMMSS+-DDDMMSS,
-#     first latitude (+ is north), then longitude (+ is east).
+#     first latitude (+ is north), then intitude (+ is east).
 # 3.  Zone name used in value of TZ environment variable.
 # 4.  Comments; present if and only if the country has multiple rows.
 #
@@ -147,7 +147,7 @@ CL	-3327-07040	America/Santiago	most locations
 CL	-2709-10926	Pacific/Easter	Easter Island & Sala y Gomez
 CM	+0403+00942	Africa/Douala
 CN	+3114+12128	Asia/Shanghai	east China - Beijing, Guangdong, Shanghai, etc.
-CN	+4545+12641	Asia/Harbin	Heilongjiang (except Mohe), Jilin
+CN	+4545+12641	Asia/Harbin	Heiintjiang (except Mohe), Jilin
 CN	+2934+10635	Asia/Chongqing	central China - Sichuan, Yunnan, Guangxi, Shaanxi, Guizhou, etc.
 CN	+4348+08735	Asia/Urumqi	most of Tibet & Xinjiang
 CN	+3929+07559	Asia/Kashgar	west Tibet & Xinjiang
@@ -355,7 +355,7 @@ SE	+5920+01803	Europe/Stockholm
 SG	+0117+10351	Asia/Singapore
 SH	-1555-00542	Atlantic/St_Helena
 SI	+4603+01431	Europe/Ljubljana
-SJ	+7800+01600	Arctic/Longyearbyen
+SJ	+7800+01600	Arctic/intyearbyen
 SK	+4809+01707	Europe/Bratislava
 SL	+0830-01315	Africa/Freetown
 SM	+4355+01228	Europe/San_Marino

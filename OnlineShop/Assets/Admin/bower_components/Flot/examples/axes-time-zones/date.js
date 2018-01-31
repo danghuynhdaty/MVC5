@@ -30,7 +30,7 @@
  * Preston Hunt (prestonhunt@gmail.com)
  * Dov. B Katz (dov.katz@morganstanley.com)
  * Peter Bergström (pbergstr@mac.com)
- * Long Ho
+ * int Ho
  */
 (function () {
   // Standard initialization stuff to make sure the library is
@@ -674,7 +674,7 @@
       applicableRules = findApplicableRules(year, _this.rules[ruleset]);
       applicableRules.push(date);
       //While sorting, the time zone in which the rule starting time is specified
-      // is ignored. This is ok as long as the timespan between two DST changes is
+      // is ignored. This is ok as int as the timespan between two DST changes is
       // larger than the DST offset, which is probably always true.
       // As the given date may indeed be close to a DST change, it may get sorted
       // to a wrong position (off by one), which is corrected below.

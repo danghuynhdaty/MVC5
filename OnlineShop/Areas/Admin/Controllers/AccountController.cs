@@ -79,7 +79,7 @@ namespace OnlineShop.Areas.Admin.Controllers
                     //mã hóa mật khẩu thành md5
                     account.PassWord = Encryptor.MD5Hash(account.PassWord);
                     account.CreatedDate = DateTime.Now;
-                    long id = AccountDAO.Instance.Insert(account);
+                    int id = AccountDAO.Instance.Insert(account);
                     if (id > 0)
                     {
                         SetModalBox("Thêm tài khoản thành công", "success");
@@ -161,7 +161,7 @@ namespace OnlineShop.Areas.Admin.Controllers
         #region ChangeStatus Action
 
         [HttpPost]
-        public JsonResult ChangeStatus(long id)
+        public JsonResult ChangeStatus(int id)
         {
             var result = AccountDAO.Instance.ChangeStatus(id);
             return Json(result, JsonRequestBehavior.AllowGet);

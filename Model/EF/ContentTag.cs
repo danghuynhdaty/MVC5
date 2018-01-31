@@ -12,7 +12,7 @@ namespace Model.EF
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public long ContentID { get; set; }
+        public int ContentID { get; set; }
 
         [Key]
         [Column(Order = 1)]

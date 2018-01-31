@@ -437,8 +437,8 @@ You can use this property to use custom icons libs. for example:
 ::
 
     {
-        leftArrow: '<i class="fa fa-long-arrow-left"></i>',
-        rightArrow: '<i class="fa fa-long-arrow-right"></i>'
+        leftArrow: '<i class="fa fa-int-arrow-left"></i>',
+        rightArrow: '<i class="fa fa-int-arrow-right"></i>'
     }
 
 

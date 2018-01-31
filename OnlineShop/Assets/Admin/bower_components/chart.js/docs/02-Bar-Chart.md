@@ -131,7 +131,7 @@ myBarChart.update();
 
 #### .addData( valuesArray, label )
 
-Calling `addData(valuesArray, label)` on your Chart instance passing an array of values for each dataset, along with a label for those bars.
+Calling `addData(valuesArray, label)` on your Chart instance passing an array of values for each dataset, aint with a label for those bars.
 
 ```javascript
 // The values array passed into addData should be one for each dataset in the chart

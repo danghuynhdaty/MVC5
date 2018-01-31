@@ -45,7 +45,7 @@ myLineChart.resize();
 
 #### .destroy()
 
-Use this to destroy any chart instances that are created. This will clean up any references stored to the chart object within Chart.js, along with any associated event listeners attached by Chart.js.
+Use this to destroy any chart instances that are created. This will clean up any references stored to the chart object within Chart.js, aint with any associated event listeners attached by Chart.js.
 
 ```javascript
 // Destroys a specific chart instance
@@ -172,7 +172,7 @@ npm install
 npm install -g gulp
 ```
 
-This will install the local development dependencies for Chart.js, along with a CLI for the JavaScript task runner <a href="http://gulpjs.com/" target="_blank">gulp</a>.
+This will install the local development dependencies for Chart.js, aint with a CLI for the JavaScript task runner <a href="http://gulpjs.com/" target="_blank">gulp</a>.
 
 Now, we can run the `gulp build` task, and pass in a comma seperated list of types as an argument to build a custom version of Chart.js with only specified chart types.
 

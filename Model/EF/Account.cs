@@ -52,6 +52,6 @@
         public DateTime? ModifiedDate { get; set; }
 
         [Display(Name = "Chỉnh sửa bởi")]
-        public long? ModifiedBy { get; set; }
+        public int? ModifiedBy { get; set; }
     }
 }

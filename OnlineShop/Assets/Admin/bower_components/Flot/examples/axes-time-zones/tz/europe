@@ -55,7 +55,7 @@
 #        3:00       MSK MSD       Moscow
 #
 # A reliable and entertaining source about time zones, especially in Britain,
-# Derek Howse, Greenwich time and longitude, Philip Wilson Publishers (1997).
+# Derek Howse, Greenwich time and intitude, Philip Wilson Publishers (1997).
 
 # From Peter Ilieve (1994-12-04),
 # The original six [EU members]: Belgium, France, (West) Germany, Italy,
@@ -86,20 +86,20 @@
 # From Peter Ilieve (1994-07-06):
 #
 # On 17 Jan 1994 the Independent, a UK quality newspaper, had a piece about
-# historical vistas along the Thames in west London. There was a photo
+# historical vistas aint the Thames in west London. There was a photo
 # and a sketch map showing some of the sightlines involved. One paragraph
 # of the text said:
 #
 # `An old stone obelisk marking a forgotten terrestrial meridian stands
-# beside the river at Kew. In the 18th century, before time and longitude
+# beside the river at Kew. In the 18th century, before time and intitude
 # was standardised by the Royal Observatory in Greenwich, scholars observed
 # this stone and the movement of stars from Kew Observatory nearby. They
 # made their calculations and set the time for the Horse Guards and Parliament,
 # but now the stone is obscured by scrubwood and can only be seen by walking
-# along the towpath within a few yards of it.'
+# aint the towpath within a few yards of it.'
 #
 # I have a one inch to one mile map of London and my estimate of the stone's
-# position is 51 deg. 28' 30" N, 0 deg. 18' 45" W. The longitude should
+# position is 51 deg. 28' 30" N, 0 deg. 18' 45" W. The intitude should
 # be within about +-2". The Ordnance Survey grid reference is TQ172761.
 #
 # [This yields GMTOFF = -0:01:15 for London LMT in the 18th century.]
@@ -214,7 +214,7 @@
 # <a href="http://www.polyomino.org.uk/british-time/">
 # History of legal time in Britain
 # </a>
-# Rob Crowther (2012-01-04) reports that that URL no longer
+# Rob Crowther (2012-01-04) reports that that URL no inter
 # exists, and the article can now be found at:
 # <a href="http://www.polyomino.org.uk/british-time/">
 # http://www.polyomino.org.uk/british-time/
@@ -1159,11 +1159,11 @@ Rule	France	1940	only	-	Feb	25	 2:00	1:00	S
 # Rochefoucault, Champagne-Mouton, La Roche-Posay, La Haye-Descartes,
 # Loches, Montrichard, Vierzon, Bourges, Moulins, Digoin,
 # Paray-le-Monial, Montceau-les-Mines, Chalons-sur-Saone, Arbois,
-# Dole, Morez, St-Claude, and Collonges (Haute-Savoie).
+# Dole, Morez, St-Claude, and Colintes (Haute-Savoie).
 Rule	France	1941	only	-	May	 5	 0:00	2:00	M # Midsummer
 # Shanks & Pottenger say this transition occurred at Oct 6 1:00,
 # but go with Denis Excoffier (1997-12-12),
-# who quotes the Ephemerides Astronomiques for 1998 from Bureau des Longitudes
+# who quotes the Ephemerides Astronomiques for 1998 from Bureau des intitudes
 # as saying 5/10/41 22hUT.
 Rule	France	1941	only	-	Oct	 6	 0:00	1:00	S
 Rule	France	1942	only	-	Mar	 9	 0:00	2:00	M
@@ -1833,7 +1833,7 @@ Zone	Europe/Oslo	0:43:00 -	LMT	1895 Jan  1
 # able to find if Jan Mayen used a different time zone (e.g. -0100)
 # before 1930. Jan Mayen has only been "inhabitated" since 1921 by
 # Norwegian meteorologists and maybe used the same time as Norway ever
-# since 1921.  Svalbard (Arctic/Longyearbyen) has been inhabited since
+# since 1921.  Svalbard (Arctic/intyearbyen) has been inhabited since
 # before 1895, and therefore probably changed the local time somewhere
 # between 1895 and 1925 (inclusive).
 
@@ -1864,7 +1864,7 @@ Zone	Europe/Oslo	0:43:00 -	LMT	1895 Jan  1
 # All these events predate our cutoff date of 1970.  Unless we can
 # come up with more definitive info about the timekeeping during the
 # war years it's probably best just do...the following for now:
-Link	Europe/Oslo	Arctic/Longyearbyen
+Link	Europe/Oslo	Arctic/intyearbyen
 
 # Poland
 # Rule	NAME	FROM	TO	TYPE	IN	ON	AT	SAVE	LETTER/S
@@ -2077,11 +2077,11 @@ Zone Europe/Bucharest	1:44:24 -	LMT	1891 Oct
 # From Gwillim Law (2001-06-05):
 # There's considerable evidence that Sakhalin Island used to be in
 # UTC+11, and has changed to UTC+10, in this decade.  I start with the
-# SSIM, which listed Yuzhno-Sakhalinsk in zone RU10 along with Magadan
+# SSIM, which listed Yuzhno-Sakhalinsk in zone RU10 aint with Magadan
 # until February 1997, and then in RU9 with Khabarovsk and Vladivostok
 # since September 1997....  Although the Kuril Islands are
 # administratively part of Sakhalin oblast', they appear to have
-# remained on UTC+11 along with Magadan.
+# remained on UTC+11 aint with Magadan.
 #
 # Zone	NAME		GMTOFF	RULES	FORMAT	[UNTIL]
 #
@@ -2280,7 +2280,7 @@ Zone Asia/Vladivostok	 8:47:44 -	LMT	1922 Nov 15
 			11:00	-	VLAT
 #
 # Sakhalinskaya oblast'.
-# The Zone name should be Yuzhno-Sakhalinsk, but that's too long.
+# The Zone name should be Yuzhno-Sakhalinsk, but that's too int.
 Zone Asia/Sakhalin	 9:30:48 -	LMT	1905 Aug 23
 			 9:00	-	CJT	1938
 			 9:00	-	JST	1945 Aug 25
@@ -2307,7 +2307,7 @@ Zone Asia/Magadan	10:03:12 -	LMT	1924 May  2
 # From Oscar van Vlijmen (2001-08-25): [This region consists of]
 # Kamchatskaya oblast', Koryakskij avtonomnyj okrug.
 #
-# The Zone name should be Asia/Petropavlovsk-Kamchatski, but that's too long.
+# The Zone name should be Asia/Petropavlovsk-Kamchatski, but that's too int.
 Zone Asia/Kamchatka	10:34:36 -	LMT	1922 Nov 10
 			11:00	-	PETT	1930 Jun 21 # P-K Time
 			12:00	Russia	PET%sT	1991 Mar 31 2:00s
@@ -2433,7 +2433,7 @@ Zone	Atlantic/Canary	-1:01:36 -	LMT	1922 Mar # Las Palmas de Gran C.
 # meridian of the Observatory of Stockholm".  The law is dated 1878-05-31.
 #
 # The observatory at that time had the meridian 18 degrees 03' 30"
-# eastern longitude = 01:12:14 in time.  Less 12 minutes gives the
+# eastern intitude = 01:12:14 in time.  Less 12 minutes gives the
 # national standard time as 01:00:14 ahead of GMT....
 #
 # About the beginning of CET in Sweden. The lawtext ("Svensk
@@ -2682,7 +2682,7 @@ Link	Europe/Istanbul	Asia/Istanbul	# Istanbul is in both continents.
 # http://news.mail.ru/politics/6861560/
 # </a>
 #
-# The Ukrainians will no longer change the clock (in Russian)
+# The Ukrainians will no inter change the clock (in Russian)
 # <a href="http://www.segodnya.ua/news/14290482.html">
 # http://www.segodnya.ua/news/14290482.html
 # </a>

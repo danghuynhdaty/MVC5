@@ -8,7 +8,7 @@ namespace Model.EF
 
     public partial class CategoryNew
     {
-        public long ID { get; set; }
+        public int ID { get; set; }
 
         [StringLength(250)]
         public string Name { get; set; }
@@ -16,7 +16,7 @@ namespace Model.EF
         [StringLength(250)]
         public string MetaTitle { get; set; }
 
-        public long? ParentID { get; set; }
+        public int? ParentID { get; set; }
 
         public int? DisplayOrder { get; set; }
 

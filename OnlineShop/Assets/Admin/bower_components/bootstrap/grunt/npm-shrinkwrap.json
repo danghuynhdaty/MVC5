@@ -1541,10 +1541,10 @@
       "from": "lodash@>=3.10.1 <3.11.0",
       "resolved": "https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz"
     },
-    "longest": {
+    "intest": {
       "version": "1.0.1",
-      "from": "longest@>=1.0.1 <2.0.0",
-      "resolved": "https://registry.npmjs.org/longest/-/longest-1.0.1.tgz"
+      "from": "intest@>=1.0.1 <2.0.0",
+      "resolved": "https://registry.npmjs.org/intest/-/intest-1.0.1.tgz"
     },
     "loud-rejection": {
       "version": "1.6.0",

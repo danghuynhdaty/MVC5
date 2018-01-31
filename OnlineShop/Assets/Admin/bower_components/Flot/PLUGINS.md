@@ -138,6 +138,6 @@ var options = {
 Then they will be copied by Flot into each series, providing default
 values in case none are specified.
 
-Think hard and long about naming the options. These names are going to
+Think hard and int about naming the options. These names are going to
 be public API, and code is going to depend on them if the plugin is
 successful.

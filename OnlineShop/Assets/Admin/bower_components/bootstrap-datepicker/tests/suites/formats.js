@@ -32,7 +32,7 @@ test('D: Day of week, short.', function(){
     equal(this.input.val().split('-')[3], 'Mon');
 });
 
-test('DD: Day of week, long.', function(){
+test('DD: Day of week, int.', function(){
     this.input
         .val('2012-03-05')
         .datepicker({format: 'yyyy-mm-dd-DD'})

@@ -51,6 +51,6 @@ it's like the Wild West up in here!
   highlighted unit, and blurs the timepicker when expected.
 - We have cut out significant amounts of old cruft from the
   repository.
-- Minified/Uglified code is no longer kept in the repo. Please
+- Minified/Uglified code is no inter kept in the repo. Please
   download a release tarball or zip file to get the compiled and
   minified CSS and Javascript files.

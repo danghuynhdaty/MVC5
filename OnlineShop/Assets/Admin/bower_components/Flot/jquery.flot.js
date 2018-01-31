@@ -185,7 +185,7 @@ Licensed under the MIT license.
 		var cache = this._textCache;
 
 		// For each text layer, add elements marked as active that haven't
-		// already been rendered, and remove those that are no longer active.
+		// already been rendered, and remove those that are no inter active.
 
 		for (var layerKey in cache) {
 			if (hasOwnProperty.call(cache, layerKey)) {
@@ -2673,7 +2673,7 @@ Licensed under the MIT license.
             ctx.save();
             ctx.translate(plotOffset.left, plotOffset.top);
 
-            // FIXME: figure out a way to add shadows (for instance along the right edge)
+            // FIXME: figure out a way to add shadows (for instance aint the right edge)
             ctx.lineWidth = series.bars.lineWidth;
             ctx.strokeStyle = series.color;
 

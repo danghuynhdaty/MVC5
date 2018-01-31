@@ -32,7 +32,7 @@
  - Fixed zoom constraints to apply only in the direction of the zoom.
    (patch by Neil Katin, issue #1204, pull request #1205)
 
- - Markings lines are no longer blurry when drawn on pixel boundaries.
+ - Markings lines are no inter blurry when drawn on pixel boundaries.
    (reported by btccointicker and Rouillard, issue #1210)
 
  - Don't discard original pie data-series values when combining slices.
@@ -101,18 +101,18 @@
  - Prevent white circles from sometimes showing up inside of pie charts.
    (reported by Pierre Dubois and Jack Klink, issues #1128 and #1073)
 
- - Label formatting no longer breaks when a page contains multiple pie charts.
+ - Label formatting no inter breaks when a page contains multiple pie charts.
    (reported by Brend Wanders, issue #1055)
 
  - When using multiple axes on opposite sides of the plot, the innermost axis
-   coming later in the list no longer has its bar drawn incorrectly.
+   coming later in the list no inter has its bar drawn incorrectly.
    (reported by ryleyb, issue #1056)
 
  - When removing series labels and redrawing the plot, the legend now updates
    correctly even when using an external container.
    (patch by Luis Silva, issue #1159, pull request #1160)
 
- - The pie plugin no longer ignores the value of the left offset option.
+ - The pie plugin no inter ignores the value of the left offset option.
    (reported by melanker, issue #1136)
 
  - Fixed a regression from 0.7, where extra padding was added unnecessarily to
@@ -147,14 +147,14 @@
    (issue #1032)
 
  - Fixed a regression in text rendering, introduced in 0.8, where axis labels
-   were no longer assigned an explicit width, and their text could not wrap.
+   were no inter assigned an explicit width, and their text could not wrap.
    (reported by sabregreen, issue #1019)
 
  - Fixed a regression in the pie plugin, introduced in 0.8, that prevented it
    from accepting data in the format '[[x, y]]'.
    (patch by Nicolas Morel, pull request #1024)
 
- - The 'zero' series option and 'autoscale' format option are no longer
+ - The 'zero' series option and 'autoscale' format option are no inter
    ignored when the series contains a null value.
    (reported by Daniel Shapiro, issue #1033)
 
@@ -162,7 +162,7 @@
    (reported by Daniel Rothig, patch by Mark Raymond, issue #1016)
 
  - When a custom color palette has fewer colors than the default palette, Flot
-   no longer fills out the colors with the remainder of the default.
+   no inter fills out the colors with the remainder of the default.
    (patch by goorpy, issue #1031, pull request #1034)
 
  - Fixed missing update for bar highlights after a zoom or other redraw.
@@ -171,7 +171,7 @@
  - Fixed compatibility with jQuery versions earlier than 1.7.
    (patch by Lee Willis, issue #1027, pull request #1027)
 
- - The mouse wheel no longer scrolls the page when using the navigate plugin.
+ - The mouse wheel no inter scrolls the page when using the navigate plugin.
    (patch by vird, pull request #1020)
 
  - Fixed missing semicolons in the core library.
@@ -309,7 +309,7 @@ The base and overlay canvas are now using the CSS classes "flot-base" and
  - The plot function is now also a jQuery chainable property.
    (patch by David Schnur, issues #734 and #816, pull request #953)
 
- - When only a single pie slice is beneath the combine threshold it is no longer
+ - When only a single pie slice is beneath the combine threshold it is no inter
    replaced by an 'other' slice. (suggested by Devin Bayer, issue #638)
 
  - Added lineJoin and minSize options to the selection plugin to control the
@@ -348,10 +348,10 @@ The base and overlay canvas are now using the CSS classes "flot-base" and
  - Updated the navigate plugin's inline copy of jquery.mousewheel to fix
    Webkit zoom problems. (reported by Hau Nguyen, issue 685)
 
- - Axis labels no longer appear as decimals rather than integers in certain
+ - Axis labels no inter appear as decimals rather than integers in certain
    cases. (patch by Clemens Stolle, issue 541)
 
- - Automatic color generation no longer produces only whites and blacks when
+ - Automatic color generation no inter produces only whites and blacks when
    there are many series. (patch by David Schnur and Tom Cleaveland)
 
  - Fixed an error when custom tick labels weren't provided as strings. (patch
@@ -367,7 +367,7 @@ The base and overlay canvas are now using the CSS classes "flot-base" and
  - Fixed various jQuery 1.8 compatibility issues. (issues #814 and #819,
    pull request #877)
 
- - Pie charts with a slice equal to or approaching 100% of the pie no longer
+ - Pie charts with a slice equal to or approaching 100% of the pie no inter
    appear invisible. (patch by David Schnur, issues #444, #658, #726, #824
    and #850, pull request #879)
 
@@ -379,7 +379,7 @@ The base and overlay canvas are now using the CSS classes "flot-base" and
  - Added support for jQuery 1.9 by removing and replacing uses of $.browser.
    (analysis and patch by Anthony Ryan, pull request #905)
 
- - Pie charts no longer disappear when redrawn during a resize or update.
+ - Pie charts no inter disappear when redrawn during a resize or update.
    (reported by Julien Bec, issue #656, pull request #910)
 
  - Avoided floating-point precision errors when calculating pie percentages.
@@ -394,7 +394,7 @@ The base and overlay canvas are now using the CSS classes "flot-base" and
  - Fixed rendering issues when using the threshold plugin with several series.
    (patch by Ivan Novikov, pull request #934)
 
- - Pie charts no longer disappear when redrawn after calling setData().
+ - Pie charts no inter disappear when redrawn after calling setData().
    (reported by zengge1984 and pareeohnos, issues #810 and #945)
 
  - Added a work-around for the problem where points with a lineWidth of zero
@@ -672,7 +672,7 @@ All future series-specific options will go into this sub-object to
 simplify plugin writing. Backward-compatibility code is in place, so
 old code should not break.
 
-"plothover" no longer provides the original data point, but instead a
+"plothover" no inter provides the original data point, but instead a
 normalized one, since there may be no corresponding original point.
 
 Due to a bug in previous versions of jQuery, you now need at least
@@ -866,7 +866,7 @@ Highlighting: you can now highlight points and datapoints are autohighlighted
 when you hover over them (if hovering is turned on).
 
 Support for dual axis has been added (based on patch by someone who's annoyed
-and /david). For each data series you can specify which axes it belongs to,
+and /david). For each data series you can specify which axes it beints to,
 and there are two more axes, x2axis and y2axis, to customize. This affects the
 "selected" event which has been renamed to "plotselected" and spews out
 ```{ xaxis: { from: -10, to: 20 } ... },``` setSelection in which the

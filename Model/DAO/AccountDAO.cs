@@ -29,7 +29,7 @@ namespace Model.DAO
             db = new OnlineShopDbContext();
         }
 
-        public long Insert(Account entity)
+        public int Insert(Account entity)
         {
             db.Accounts.Add(entity);
             db.SaveChanges();
@@ -165,7 +165,7 @@ namespace Model.DAO
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public bool ChangeStatus(long id)
+        public bool ChangeStatus(int id)
         {
             //Lấy ra account cần đổi status
             var account = db.Accounts.Find(id);

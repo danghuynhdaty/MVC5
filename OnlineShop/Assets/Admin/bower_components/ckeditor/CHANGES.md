@@ -26,7 +26,7 @@ Fixed Issues:
 
 **Important Notes:**
 
-* [#13793](http://dev.ckeditor.com/ticket/13793): The [`embed_provider`](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-embed_provider) configuration option for the [Media Embed](http://ckeditor.com/addon/embed) and [Semantic Media Embed](http://ckeditor.com/addon/embedsemantic) plugins is no longer preset by default.
+* [#13793](http://dev.ckeditor.com/ticket/13793): The [`embed_provider`](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-embed_provider) configuration option for the [Media Embed](http://ckeditor.com/addon/embed) and [Semantic Media Embed](http://ckeditor.com/addon/embedsemantic) plugins is no inter preset by default.
 * The [UI Color](http://ckeditor.com/addon/uicolor) plugin now uses a custom color picker instead of the `YUI 2.7.0` library which has some known vulnerabilities (it's a security precaution, there was no security issue in CKEditor due to the way it was used).
 
 New Features:
@@ -129,7 +129,7 @@ New Features:
 * [#14707](http://dev.ckeditor.com/ticket/14707): Added a new [Copy Formatting](http://ckeditor.com/addon/copyformatting) feature to enable easy copying of styles between your document parts.
 * Introduced the completely rewritten [Paste from Word](http://ckeditor.com/addon/pastefromword) plugin:
 	* Backward incompatibility: The [`config.pasteFromWordRemoveFontStyles`](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-pasteFromWordRemoveFontStyles) option now defaults to `false`. This option will be deprecated in the future. Use [Advanced Content Filter](http://docs.ckeditor.com/#!/guide/dev_acf) to replicate the effect of setting it to `true`.
-	* Backward incompatibility: The [`config.pasteFromWordNumberedHeadingToList`](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-pasteFromWordNumberedHeadingToList) and [`config.pasteFromWordRemoveStyles`](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-pasteFromWordRemoveStyles) options were dropped and no longer have any effect on pasted content.
+	* Backward incompatibility: The [`config.pasteFromWordNumberedHeadingToList`](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-pasteFromWordNumberedHeadingToList) and [`config.pasteFromWordRemoveStyles`](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-pasteFromWordRemoveStyles) options were dropped and no inter have any effect on pasted content.
 	* Major improvements in preservation of list numbering, styling and indentation (nested lists with multiple levels).
 	* Major improvements in document structure parsing that fix plenty of issues with distorted or missing content after paste.
 * Added new translation: Occitan. Thanks to [Cédric Valmary](https://totenoc.eu/)!
@@ -342,7 +342,7 @@ Fixed Issues:
 
 Other Changes:
 
-* [#11725](http://dev.ckeditor.com/ticket/11725): Marked [`CKEDITOR.env.mobile`](http://docs.ckeditor.com/#!/api/CKEDITOR.env-property-mobile) as deprecated. The reason is that it is no longer clear what "mobile" means.
+* [#11725](http://dev.ckeditor.com/ticket/11725): Marked [`CKEDITOR.env.mobile`](http://docs.ckeditor.com/#!/api/CKEDITOR.env-property-mobile) as deprecated. The reason is that it is no inter clear what "mobile" means.
 * [#13737](http://dev.ckeditor.com/ticket/13737): Upgraded [Bender.js](https://github.com/benderjs/benderjs) to 0.4.1.
 
 ## CKEditor 4.5.3
@@ -500,7 +500,7 @@ New Features:
     * Direct access to clipboard could only be implemented in Chrome, Safari on Mac OS, Opera and Firefox. In other browsers the pastebin must still be used.
 
 * [#12875](http://dev.ckeditor.com/ticket/12875): Samples and toolbar configuration tools.
-  * The old set of samples shipped with every CKEditor package was replaced with a shiny new single-page sample. This change concluded a long term plan which started from introducing the [CKEditor SDK](http://sdk.ckeditor.com/) and [CKEditor Functionality Overview](http://docs.ckeditor.com/#!/guide/dev_features) section in the documentation which essentially redefined the old samples.
+  * The old set of samples shipped with every CKEditor package was replaced with a shiny new single-page sample. This change concluded a int term plan which started from introducing the [CKEditor SDK](http://sdk.ckeditor.com/) and [CKEditor Functionality Overview](http://docs.ckeditor.com/#!/guide/dev_features) section in the documentation which essentially redefined the old samples.
   * Toolbar configurators with live previews were introduced. They will be shipped with every CKEditor package and are meant to help in configuring toolbar layouts.
 
 * [#10925](http://dev.ckeditor.com/ticket/10925): The [Media Embed](http://ckeditor.com/addon/embed) and [Semantic Media Embed](http://ckeditor.com/addon/embedsemantic) plugins were introduced. Read more about the new features in the [Embedding Content](http://docs.ckeditor.com/#!/guide/dev_media_embed) article.
@@ -683,7 +683,7 @@ Fixed Issues:
 * [#12185](http://dev.ckeditor.com/ticket/12185): [IE9QM] Fixed: Error thrown when moving the mouse over focused editor's scrollbar.
 * [#12215](http://dev.ckeditor.com/ticket/12215): Fixed: Basepath resolution does not recognize semicolon as a query separator.
 * [#12135](http://dev.ckeditor.com/ticket/12135): Fixed: [Remove Format](http://ckeditor.com/addon/removeformat) does not work on widgets.
-* [#12298](http://dev.ckeditor.com/ticket/12298): [IE11] Fixed: Clicking below `<body>` in Compatibility Mode will no longer reset selection to the first line.
+* [#12298](http://dev.ckeditor.com/ticket/12298): [IE11] Fixed: Clicking below `<body>` in Compatibility Mode will no inter reset selection to the first line.
 * [#12204](http://dev.ckeditor.com/ticket/12204): Fixed: Editor's voice label is not affected by [`config.title`](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-title).
 * [#11915](http://dev.ckeditor.com/ticket/11915): Fixed: With [SCAYT](http://ckeditor.com/addon/scayt) enabled, cursor moves to the beginning of the first highlighted, misspelled word after typing or pasting into the editor.
 * [SCAYT](https://github.com/WebSpellChecker/ckeditor-plugin-scayt/issues/69): Fixed: Error thrown in the console after enabling [SCAYT](http://ckeditor.com/addon/scayt) and trying to add a new image.
@@ -797,7 +797,7 @@ Other Changes:
 
 * Marked the [`editor.beforePaste`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-event-beforePaste) event as deprecated.
 * The default class of captioned images has changed to `image` (was: `caption`). Please note that once edited in CKEditor 4.4+, all existing images of the `caption` class (`<figure class="caption">`) will be [filtered out](http://docs.ckeditor.com/#!/guide/dev_advanced_content_filter) unless the [`config.image2_captionedClass`](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-image2_captionedClass) option is set to `caption`. For backward compatibility (i.e. when upgrading), it is highly recommended to use this setting, which also helps prevent CSS conflicts, etc. This does not apply to new CKEditor integrations.
-* Widgets without defined buttons are no longer registered automatically to the [Advanced Content Filter](http://docs.ckeditor.com/#!/guide/dev_advanced_content_filter). Before CKEditor 4.4 widgets were registered to the ACF which was an incorrect behavior ([#11567](http://dev.ckeditor.com/ticket/11567)). This change should not have any impact on standard scenarios, but if your button does not execute the widget command, you need to set [`allowedContent`](http://docs.ckeditor.com/#!/api/CKEDITOR.feature-property-allowedContent) and [`requiredContent`](http://docs.ckeditor.com/#!/api/CKEDITOR.feature-property-requiredContent) properties for it manually, because the editor will not be able to find them.
+* Widgets without defined buttons are no inter registered automatically to the [Advanced Content Filter](http://docs.ckeditor.com/#!/guide/dev_advanced_content_filter). Before CKEditor 4.4 widgets were registered to the ACF which was an incorrect behavior ([#11567](http://dev.ckeditor.com/ticket/11567)). This change should not have any impact on standard scenarios, but if your button does not execute the widget command, you need to set [`allowedContent`](http://docs.ckeditor.com/#!/api/CKEDITOR.feature-property-allowedContent) and [`requiredContent`](http://docs.ckeditor.com/#!/api/CKEDITOR.feature-property-requiredContent) properties for it manually, because the editor will not be able to find them.
 * The [Show Borders](http://ckeditor.com/addon/showborders) plugin was added to the Standard installation package in order to ensure that unstyled tables are still visible for the user ([#11665](http://dev.ckeditor.com/ticket/11665)).
 * Since CKEditor 4.4 the editor instance should be passed to [`CKEDITOR.style`](http://docs.ckeditor.com/#!/api/CKEDITOR.style) methods to ensure full compatibility with other features (e.g. applying styles to widgets requires that). We ensured backward compatibility though, so the [`CKEDITOR.style`](http://docs.ckeditor.com/#!/api/CKEDITOR.style) will work even when the editor instance is not provided.
 
@@ -853,7 +853,7 @@ Fixed Issues:
 Fixed Issues:
 
 * [#11597](http://dev.ckeditor.com/ticket/11597): [IE11] Fixed: Error thrown when trying to open the [preview](http://ckeditor.com/addon/preview) using the keyboard.
-* [#11544](http://dev.ckeditor.com/ticket/11544): [Placeholders](http://ckeditor.com/addon/placeholder) will no longer be upcasted in parents not accepting `<span>` elements.
+* [#11544](http://dev.ckeditor.com/ticket/11544): [Placeholders](http://ckeditor.com/addon/placeholder) will no inter be upcasted in parents not accepting `<span>` elements.
 * [#8663](http://dev.ckeditor.com/ticket/8663): Fixed [`element.renameNode()`](http://docs.ckeditor.com/#!/api/CKEDITOR.dom.element-method-renameNode) not clearing the [`element.getName()`](http://docs.ckeditor.com/#!/api/CKEDITOR.dom.element-method-getName) cache.
 * [#11574](http://dev.ckeditor.com/ticket/11574): Fixed: *Backspace* destroying the DOM structure if an inline editable is placed in a list item.
 * [#11603](http://dev.ckeditor.com/ticket/11603): Fixed: [Table Resize](http://ckeditor.com/addon/tableresize) attaches to tables outside the editable.
@@ -869,10 +869,10 @@ Fixed Issues:
 
 * [#11500](http://dev.ckeditor.com/ticket/11500): [WebKit/Blink] Fixed: Selection lost when setting data in another inline editor. Additionally, [`selection.removeAllRanges()`](http://docs.ckeditor.com/#!/api/CKEDITOR.dom.selection-method-removeAllRanges) is now scoped to selection's [root](http://docs.ckeditor.com/#!/api/CKEDITOR.dom.selection-property-root).
 * [#11104](http://dev.ckeditor.com/ticket/11104): [IE] Fixed: Various issues with scrolling and selection when focusing widgets.
-* [#11487](http://dev.ckeditor.com/ticket/11487): Moving mouse over the [Enhanced Image](http://ckeditor.com/addon/image2) widget will no longer change the value returned by the [`editor.checkDirty()`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-method-checkDirty) method.
+* [#11487](http://dev.ckeditor.com/ticket/11487): Moving mouse over the [Enhanced Image](http://ckeditor.com/addon/image2) widget will no inter change the value returned by the [`editor.checkDirty()`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-method-checkDirty) method.
 * [#8673](http://dev.ckeditor.com/ticket/8673): [WebKit] Fixed: Cannot select and remove the [Page Break](http://ckeditor.com/addon/pagebreak).
 * [#11413](http://dev.ckeditor.com/ticket/11413): Fixed: Incorrect [`editor.execCommand()`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-method-execCommand) behavior.
-* [#11438](http://dev.ckeditor.com/ticket/11438): Splitting table cells vertically is no longer changing table structure.
+* [#11438](http://dev.ckeditor.com/ticket/11438): Splitting table cells vertically is no inter changing table structure.
 * [#8899](http://dev.ckeditor.com/ticket/8899): Fixed: Links in the [About CKEditor](http://ckeditor.com/addon/about) dialog window now open in a new browser window or tab.
 * [#11490](http://dev.ckeditor.com/ticket/11490): Fixed: [Menu button](http://ckeditor.com/addon/menubutton) panel not showing in the source mode.
 * [#11417](http://dev.ckeditor.com/ticket/11417): The [`widget.doubleclick`](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.widget-event-doubleclick) event is not canceled anymore after editing was triggered.
@@ -911,7 +911,7 @@ Fixed Issues:
 * [#11126](http://dev.ckeditor.com/ticket/11126): Fixed: Native Undo executed once the bottom of the snapshot stack is reached.
 * [#11131](http://dev.ckeditor.com/ticket/11131): [Div Editing Area](http://ckeditor.com/addon/divarea): Fixed: Error thrown when switching to source mode if the selection was in widget's nested editable.
 * [#11139](http://dev.ckeditor.com/ticket/11139): [Div Editing Area](http://ckeditor.com/addon/divarea): Fixed: Elements Path is not cleared after switching to source mode.
-* [#10778](http://dev.ckeditor.com/ticket/10778): Fixed a bug with range enlargement. The range no longer expands to visible whitespace.
+* [#10778](http://dev.ckeditor.com/ticket/10778): Fixed a bug with range enlargement. The range no inter expands to visible whitespace.
 * [#11146](http://dev.ckeditor.com/ticket/11146): [IE] Fixed: Preview window switches Internet Explorer to Quirks Mode.
 * [#10762](http://dev.ckeditor.com/ticket/10762): [IE] Fixed: JavaScript code displayed in preview window's URL bar.
 * [#11186](http://dev.ckeditor.com/ticket/11186): Introduced the [`widgets.repository.addUpcastCallback()`](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.widget.repository-method-addUpcastCallback) method that allows to block upcasting given element to a widget.
@@ -943,7 +943,7 @@ Fixed Issues:
 * [#11075](http://dev.ckeditor.com/ticket/11075): With drop-down menu button focused, pressing the *Down Arrow* key will now open the menu and focus its first option.
 * [#11165](http://dev.ckeditor.com/ticket/11165): Fixed: The [File Browser](http://ckeditor.com/addon/filebrowser) plugin cannot be removed from the editor.
 * [#11159](http://dev.ckeditor.com/ticket/11159): [IE9-10] [Enhanced Image](http://ckeditor.com/addon/image2): Fixed buggy discovery of image dimensions.
-* [#11101](http://dev.ckeditor.com/ticket/11101): Drop-down lists no longer break when given double quotes.
+* [#11101](http://dev.ckeditor.com/ticket/11101): Drop-down lists no inter break when given double quotes.
 * [#11077](http://dev.ckeditor.com/ticket/11077): [Enhanced Image](http://ckeditor.com/addon/image2): Empty undo step recorded when resizing the image.
 * [#10853](http://dev.ckeditor.com/ticket/10853): [Enhanced Image](http://ckeditor.com/addon/image2): Widget has paragraph wrapper when de-captioning unaligned image.
 * [#11198](http://dev.ckeditor.com/ticket/11198): Widgets: Drag handler is not fully visible when an inline widget is in a heading.
@@ -1001,7 +1001,7 @@ Fixed Issues:
 * [#10877](http://dev.ckeditor.com/ticket/10877): Fixed: [WebSpellChecker](http://ckeditor.com/addon/wsc) fails to apply changes if a nested editable was focused.
 * [#10877](http://dev.ckeditor.com/ticket/10877): Fixed: [SCAYT](http://ckeditor.com/addon/wsc) blocks typing in nested editables.
 * [#11079](http://dev.ckeditor.com/ticket/11079): Add button icons to the [Placeholder](http://ckeditor.com/addon/placeholder) sample.
-* [#10870](http://dev.ckeditor.com/ticket/10870): The `paste` command is no longer being disabled when the clipboard is empty.
+* [#10870](http://dev.ckeditor.com/ticket/10870): The `paste` command is no inter being disabled when the clipboard is empty.
 * [#10854](http://dev.ckeditor.com/ticket/10854): Fixed: Firefox prepends `<br>` to `<body>`, so it is stripped by the HTML data processor.
 * [#10823](http://dev.ckeditor.com/ticket/10823): Fixed: [Link](http://ckeditor.com/addon/link) plugin does not work with non-editable content.
 * [#10828](http://dev.ckeditor.com/ticket/10828): [Magic Line](http://ckeditor.com/addon/magicline) integration with the Widget System.
@@ -1009,7 +1009,7 @@ Fixed Issues:
 * [#11066](http://dev.ckeditor.com/ticket/11066): Widget's private parts use CSS reset.
 * [#11027](http://dev.ckeditor.com/ticket/11027): Fixed: Block commands break on widgets; added the [`contentDomInvalidated`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-event-contentDomInvalidated) event.
 * [#10430](http://dev.ckeditor.com/ticket/10430): Resolve dependence of the [Image](http://ckeditor.com/addon/image) plugin on the [Form Elements](http://ckeditor.com/addon/forms) plugin.
-* [#10911](http://dev.ckeditor.com/ticket/10911): Fixed: Browser *Alt* hotkeys will no longer be blocked while a widget is focused.
+* [#10911](http://dev.ckeditor.com/ticket/10911): Fixed: Browser *Alt* hotkeys will no inter be blocked while a widget is focused.
 * [#11082](http://dev.ckeditor.com/ticket/11082): Fixed: Selected widget is not copied or cut when using toolbar buttons or context menu.
 * [#11083](http://dev.ckeditor.com/ticket/11083): Fixed list and div element application to block widgets.
 * [#10887](http://dev.ckeditor.com/ticket/10887): Internet Explorer 8 compatibility issues related to the Widget System.
@@ -1112,7 +1112,7 @@ New Features:
 
 Fixed Issues:
 
-* [#10599](http://dev.ckeditor.com/ticket/10599): [Indent](http://ckeditor.com/addon/indent) plugin is no longer required by the [List](http://ckeditor.com/addon/list) plugin.
+* [#10599](http://dev.ckeditor.com/ticket/10599): [Indent](http://ckeditor.com/addon/indent) plugin is no inter required by the [List](http://ckeditor.com/addon/list) plugin.
 * [#10370](http://dev.ckeditor.com/ticket/10370): Inconsistency in data events between framed and inline editors.
 * [#10438](http://dev.ckeditor.com/ticket/10438): [FF, IE] No selection is done on an editable element on executing [`editor.setData()`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-method-setData).
 
@@ -1184,7 +1184,7 @@ Fixed Issues:
 * [#10224](http://dev.ckeditor.com/ticket/10224): Advanced Content Filter does not remove non-empty `<a>` elements anymore.
 * Minor issues in plugin integration with Advanced Content Filter:
   * [#10166](http://dev.ckeditor.com/ticket/10166): Added transformation from the `align` attribute to `float` style to preserve backward compatibility after the introduction of Advanced Content Filter.
-  * [#10195](http://dev.ckeditor.com/ticket/10195): [Image](http://ckeditor.com/addon/image) plugin no longer registers rules for links to Advanced Content Filter.
+  * [#10195](http://dev.ckeditor.com/ticket/10195): [Image](http://ckeditor.com/addon/image) plugin no inter registers rules for links to Advanced Content Filter.
   * [#10213](http://dev.ckeditor.com/ticket/10213): [Justify](http://ckeditor.com/addon/justify) plugin is now correctly registering rules to Advanced Content Filter when [`config.justifyClasses`](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-justifyClasses) is defined.
 
 ## CKEditor 4.1 RC

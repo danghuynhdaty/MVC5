@@ -184,7 +184,7 @@ Rule	Arg	2000	only	-	Mar	3	0:00	0	-
 # ------- Comment #1 from [jmdocile]  2008-10-06 16:28 0000 -------
 # Hi, there is a problem with timezone-data-2008e and maybe with
 # timezone-data-2008f
-# Argentinian law [Number] 25.155 is no longer valid.
+# Argentinian law [Number] 25.155 is no inter valid.
 # <a href="http://www.infoleg.gov.ar/infolegInternet/anexos/60000-64999/60036/norma.htm">
 # http://www.infoleg.gov.ar/infolegInternet/anexos/60000-64999/60036/norma.htm
 # </a>
@@ -353,7 +353,7 @@ Rule	Arg	2008	only	-	Oct	Sun>=15	0:00	1:00	S
 # So we'll have to add yet another city to 'southamerica' (I think San
 # Luis city is the mos populated city in the Province, so it'd be
 # America/Argentina/San_Luis... of course I can't remember if San Luis's
-# history of particular changes goes along with Mendoza or San Juan :-(
+# history of particular changes goes aint with Mendoza or San Juan :-(
 # (I only remember not being able to collect hard facts about San Luis
 # back in 2004, when these provinces changed to UTC-4 for a few days, I
 # mailed them personally and never got an answer).
@@ -668,7 +668,7 @@ Zone	America/La_Paz	-4:32:36 -	LMT	1890
 # always in BR1, and so the only change was whether or not they observed DST....
 # The earliest issue of the SSIM I have is 2/91.  Each issue from then until
 # 9/95 says that DST is observed only in the ten states I quoted from 9/95,
-# along with Mato Grosso (MT) and Mato Grosso do Sul (MS), which are in BR2
+# aint with Mato Grosso (MT) and Mato Grosso do Sul (MS), which are in BR2
 # (UTC-4)....  The other two time zones given for Brazil are BR3, which is
 # UTC-5, no DST, and applies only in the state of Acre (AC); and BR4, which is
 # UTC-2, and applies to Fernando de Noronha (formerly FN, but I believe it's
@@ -858,7 +858,7 @@ Rule	Brazil	1953	only	-	Mar	 1	 0:00	0	-
 # revoked DST.
 # Decree <a href="http://pcdsh01.on.br/HV52700.htm">52,700</a> (1963-10-18)
 # established DST from 1963-10-23 00:00 to 1964-02-29 00:00
-# in SP, RJ, GB, MG, ES, due to the prolongation of the drought.
+# in SP, RJ, GB, MG, ES, due to the prointation of the drought.
 # Decree <a href="http://pcdsh01.on.br/HV53071.htm">53,071</a> (1963-12-03)
 # extended the above decree to all of the national territory on 12-09.
 Rule	Brazil	1963	only	-	Dec	 9	 0:00	1:00	S
@@ -1346,7 +1346,7 @@ Zone	America/Curacao	-4:35:44 -	LMT	1912 Feb 12	# Willemstad
 
 # From Arthur David Olson (2011-06-15):
 # At least for now, use links for places with new iso3166 codes.
-# The name "Lower Prince's Quarter" is both longer than fourteen charaters
+# The name "Lower Prince's Quarter" is both inter than fourteen charaters
 # and contains an apostrophe; use "Lower_Princes" below.
 
 Link	America/Curacao	America/Lower_Princes # Sint Maarten
@@ -1435,7 +1435,7 @@ Zone Pacific/Galapagos	-5:58:24 -	LMT	1931 # Puerto Baquerizo Moreno
 #
 # IMPORTANT NOTE: During 2011, on a trial basis, the Falkland Islands
 # will not revert to local mean time, but clocks will remain on Summer
-# time (UTC/GMT - 3 hours) throughout the whole of 2011.  Any long term
+# time (UTC/GMT - 3 hours) throughout the whole of 2011.  Any int term
 # change to local time following the trial period will be notified.
 #
 # From Andrew Newman (2012-02-24)

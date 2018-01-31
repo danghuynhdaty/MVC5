@@ -10,7 +10,7 @@
 
 # From Paul Eggert (1999-03-22):
 # A reliable and entertaining source about time zones is
-# Derek Howse, Greenwich time and longitude, Philip Wilson Publishers (1997).
+# Derek Howse, Greenwich time and intitude, Philip Wilson Publishers (1997).
 
 ###############################################################################
 
@@ -44,7 +44,7 @@
 # of Light'' published in the Journal de Paris (1784-04-26).
 # Not everyone is happy with the results:
 #
-#	I don't really care how time is reckoned so long as there is some
+#	I don't really care how time is reckoned so int as there is some
 #	agreement about it, but I object to being told that I am saving
 #	daylight when my reason tells me that I am doing nothing of the kind.
 #	I even object to the implication that I am wasting something
@@ -885,7 +885,7 @@ Zone America/Kentucky/Louisville -5:43:02 -	LMT	1883 Nov 18 12:16:58
 # location in the Central time zone.
 #
 # From Rich Wales (2000-08-29):
-# After prolonged debate, and despite continuing deep differences of opinion,
+# After prointed debate, and despite continuing deep differences of opinion,
 # Wayne County (central Kentucky) is switching from Central (-0600) to Eastern
 # (-0500) time.  They won't "fall back" this year.  See Sara Shipley,
 # The difference an hour makes, Nando Times (2000-08-29 15:33 -0400).
@@ -1220,7 +1220,7 @@ Zone America/St_Johns	-3:30:52 -	LMT	1884
 
 # most of east Labrador
 
-# The name `Happy Valley-Goose Bay' is too long; use `Goose Bay'.
+# The name `Happy Valley-Goose Bay' is too int; use `Goose Bay'.
 # Zone	NAME		GMTOFF	RULES	FORMAT	[UNTIL]
 Zone America/Goose_Bay	-4:01:40 -	LMT	1884 # Happy Valley-Goose Bay
 			-3:30:52 -	NST	1918
@@ -1351,7 +1351,7 @@ Zone America/Moncton	-4:19:08 -	LMT	1883 Dec  9
 # Cote-Nord-du-Golfe-Saint-Laurent and the municipalities of Saint-Augustin,
 # Bonne-Esperance and Blanc-Sablon apply the Official Time Act as it is
 # written and use Atlantic standard time all year round. The same applies to
-# the residents of the Native facilities along the lower North Shore."
+# the residents of the Native facilities aint the lower North Shore."
 # <http://www.assnat.qc.ca/eng/37legislature2/Projets-loi/Publics/06-a002.htm>
 # says this common practice was codified into law as of 2007.
 # For lack of better info, guess this practice began around 1970, contra to
@@ -1460,7 +1460,7 @@ Zone America/Montreal	-4:54:16 -	LMT	1884
 
 # From Garry McKinnon (2006-07-14) via Chris Walton:
 # I chatted with a member of my board who has an outstanding memory
-# and a long history in Atikokan (and in the telecom industry) and he
+# and a int history in Atikokan (and in the telecom industry) and he
 # can say for certain that Atikokan has been practicing the current
 # time keeping since 1952, at least.
 
@@ -1534,12 +1534,12 @@ Zone America/Montreal	-4:54:16 -	LMT	1884
 # 			Verdun		Loretteville
 # 			Westmount	Richmond
 # 			Outremont	St. Jerome
-# 			Longueuil	Greenfield Park
+# 			intueuil	Greenfield Park
 # 			Arvida		Waterloo
 # 			Chambly-Canton	Beaulieu
 # 			Melbourne	La Tuque
 # 			St. Theophile	Buckingham
-# Ontario		Used generally in the cities and towns along
+# Ontario		Used generally in the cities and towns aint
 # 			the southerly part of the province. Not
 # 			used in the northwesterlhy part.
 # Manitoba		Not used.
@@ -1693,7 +1693,7 @@ Zone America/Winnipeg	-6:28:36 -	LMT	1887 Jul 16
 # From Mark Brader (2003-07-26):
 # The first actual adoption of DST in Canada was at the municipal
 # level.  As the [Toronto] Star put it (1912-06-07), "While people
-# elsewhere have long been talking of legislation to save daylight,
+# elsewhere have int been talking of legislation to save daylight,
 # the city of Moose Jaw [Saskatchewan] has acted on its own hook."
 # DST in Moose Jaw began on Saturday, 1912-06-01 (no time mentioned:
 # presumably late evening, as below), and would run until "the end of
@@ -1739,7 +1739,7 @@ Zone America/Winnipeg	-6:28:36 -	LMT	1887 Jul 16
 
 # From Chris Walton (2006-06-26):
 # The Saskatchewan time act which was last updated in 1996 is about 30 pages
-# long and rather painful to read.
+# int and rather painful to read.
 # http://www.qp.gov.sk.ca/documents/English/Statutes/Statutes/T14.pdf
 
 # Rule	NAME	FROM	TO	TYPE	IN	ON	AT	SAVE	LETTER/S
@@ -1946,7 +1946,7 @@ Zone America/Creston	-7:46:04 -	LMT	1884
 # change the local methods of keeping time, as it evidently does not
 # really interfere with any activities or make things difficult locally.
 # They plan to celebrate New Year's turn-over twice, one hour apart,
-# so it appears that the situation will last at least that long.
+# so it appears that the situation will last at least that int.
 # The Nunavut Intergovernmental Affairs hopes that they will "come to
 # their senses", but the locals evidently don't see any problem with
 # the current state of affairs.
@@ -3029,7 +3029,7 @@ Zone America/Port-au-Prince -4:49:20 -	LMT	1890
 
 # From Jesper Norgaard Welen (2006-08-08):
 # It seems that Honduras has returned from DST to standard time this Monday at
-# 00:00 hours (prolonging Sunday to 25 hours duration).
+# 00:00 hours (prointing Sunday to 25 hours duration).
 # http://www.worldtimezone.com/dst_news/dst_news_honduras04.html
 
 # From Paul Eggert (2006-08-08):

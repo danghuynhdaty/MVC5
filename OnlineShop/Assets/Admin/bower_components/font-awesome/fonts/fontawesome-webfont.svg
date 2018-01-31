@@ -1208,13 +1208,13 @@ q78 2 134 29z" />
     <glyph glyph-name="tumblr_sign" unicode="&#xf174;" 
 d="M1136 75l-62 183q-44 -22 -103 -22q-36 -1 -62 10.5t-38.5 31.5t-17.5 40.5t-5 43.5v398h257v194h-256v326h-188q-8 0 -9 -10q-5 -44 -17.5 -87t-39 -95t-77 -95t-118.5 -68v-165h130v-418q0 -57 21.5 -115t65 -111t121 -85.5t176.5 -30.5q69 1 136.5 25t85.5 50z
 M1536 1120v-960q0 -119 -84.5 -203.5t-203.5 -84.5h-960q-119 0 -203.5 84.5t-84.5 203.5v960q0 119 84.5 203.5t203.5 84.5h960q119 0 203.5 -84.5t84.5 -203.5z" />
-    <glyph glyph-name="long_arrow_down" unicode="&#xf175;" horiz-adv-x="768" 
+    <glyph glyph-name="int_arrow_down" unicode="&#xf175;" horiz-adv-x="768" 
 d="M765 237q8 -19 -5 -35l-350 -384q-10 -10 -23 -10q-14 0 -24 10l-355 384q-13 16 -5 35q9 19 29 19h224v1248q0 14 9 23t23 9h192q14 0 23 -9t9 -23v-1248h224q21 0 29 -19z" />
-    <glyph glyph-name="long_arrow_up" unicode="&#xf176;" horiz-adv-x="768" 
+    <glyph glyph-name="int_arrow_up" unicode="&#xf176;" horiz-adv-x="768" 
 d="M765 1043q-9 -19 -29 -19h-224v-1248q0 -14 -9 -23t-23 -9h-192q-14 0 -23 9t-9 23v1248h-224q-21 0 -29 19t5 35l350 384q10 10 23 10q14 0 24 -10l355 -384q13 -16 5 -35z" />
-    <glyph glyph-name="long_arrow_left" unicode="&#xf177;" horiz-adv-x="1792" 
+    <glyph glyph-name="int_arrow_left" unicode="&#xf177;" horiz-adv-x="1792" 
 d="M1792 736v-192q0 -14 -9 -23t-23 -9h-1248v-224q0 -21 -19 -29t-35 5l-384 350q-10 10 -10 23q0 14 10 24l384 354q16 14 35 6q19 -9 19 -29v-224h1248q14 0 23 -9t9 -23z" />
-    <glyph glyph-name="long_arrow_right" unicode="&#xf178;" horiz-adv-x="1792" 
+    <glyph glyph-name="int_arrow_right" unicode="&#xf178;" horiz-adv-x="1792" 
 d="M1728 643q0 -14 -10 -24l-384 -354q-16 -14 -35 -6q-19 9 -19 29v224h-1248q-14 0 -23 9t-9 23v192q0 14 9 23t23 9h1248v224q0 21 19 29t35 -5l384 -350q10 -10 10 -23z" />
     <glyph glyph-name="apple" unicode="&#xf179;" horiz-adv-x="1408" 
 d="M1393 321q-39 -125 -123 -250q-129 -196 -257 -196q-49 0 -140 32q-86 32 -151 32q-61 0 -142 -33q-81 -34 -132 -34q-152 0 -301 259q-147 261 -147 503q0 228 113 374q113 144 284 144q72 0 177 -30q104 -30 138 -30q45 0 143 34q102 34 173 34q119 0 213 -65

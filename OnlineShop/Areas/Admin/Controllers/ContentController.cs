@@ -84,7 +84,7 @@ namespace OnlineShop.Areas.Admin.Controllers
 
                 content.CreatedBy = Common.CommontConstant.USER_SESSION;
                 content.ModifiedBy = Common.CommontConstant.USER_SESSION;
-                long id = ContentDAO.Instance.Insert(content);
+                int id = ContentDAO.Instance.Insert(content);
                 //nếu thêm thành công thì redirect về index của contentcontroller
                 if (id > 0)
                 {
@@ -108,7 +108,7 @@ namespace OnlineShop.Areas.Admin.Controllers
         #region Edit Action
 
         [HttpGet]
-        public ActionResult Edit(long id)
+        public ActionResult Edit(int id)
         {
             //lấy ra content cần sửa từ db thông qa dao
             Content model = ContentDAO.Instance.GetByID(id);
@@ -154,7 +154,7 @@ namespace OnlineShop.Areas.Admin.Controllers
         #region Detail Region
 
         [HttpGet]
-        public ActionResult Detail(long id)
+        public ActionResult Detail(int id)
         {
             var model = ContentDAO.Instance.GetByID(id);
             return View(model);
@@ -178,7 +178,7 @@ namespace OnlineShop.Areas.Admin.Controllers
         /// <summary>
         /// set data for viewbag tranfer to view
         /// </summary>
-        public void SetViewBag(long? selectedID = null)
+        public void SetViewBag(int? selectedID = null)
         {
             var listCategory = NewsCategoryDAO.Instance.GetListCategory();
             ViewBag.CategoryID = new SelectList(listCategory, "ID", "Name", selectedID);
