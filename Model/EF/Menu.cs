@@ -1,4 +1,4 @@
-namespace Model.EF
+﻿namespace Model.EF
 {
     using System;
     using System.Collections.Generic;
@@ -12,18 +12,24 @@ namespace Model.EF
         public int ID { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Tên menu")]
         public string Text { get; set; }
 
         [StringLength(250)]
+        [Display(Name = "Liên kết")]
         public string Link { get; set; }
 
+        [Display(Name = "Thứ tự hiển thị")]
         public int? DisplayOrder { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Mục tiêu")]
         public string Target { get; set; }
 
-        public bool? Status { get; set; }
+        [Display(Name = "Trạng thái")]
+        public bool Status { get; set; }
 
+        [Display(Name = "Loại")]
         public int TypeID { get; set; }
     }
 }

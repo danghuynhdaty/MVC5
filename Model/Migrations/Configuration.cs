@@ -1,7 +1,10 @@
 namespace OnlineShopModel.Migrations
 {
     using Model.EF;
+    using System;
+    using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Model.EF.OnlineShopDbContext>
     {
@@ -16,10 +19,7 @@ namespace OnlineShopModel.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
-
-            context.Accounts.AddOrUpdate(new Account() { UserName = "daty", PassWord = "c4ca4238a0b923820dcc509a6f75849b", Name ="Dang Huynh Dat Y" });
-
-            context.SaveChanges();
+            context.Accounts.AddOrUpdate(new Account() { UserName = "daty", PassWord = "c4ca4238a0b923820dcc509a6f75849b", Name = "Dang Huynh Dat Y", Status = true });
         }
     }
 }

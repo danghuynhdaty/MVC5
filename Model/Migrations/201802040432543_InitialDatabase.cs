@@ -3,7 +3,7 @@ namespace OnlineShopModel.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialProject : DbMigration
+    public partial class InitialDatabase : DbMigration
     {
         public override void Up()
         {
@@ -11,11 +11,11 @@ namespace OnlineShopModel.Migrations
                 "dbo.About",
                 c => new
                     {
-                        ID = c.Long(nullable: false, identity: true),
-                        Name = c.String(maxLength: 250),
+                        ID = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 250),
                         MetaTitle = c.String(maxLength: 250, unicode: false),
-                        Description = c.String(maxLength: 500, unicode: false),
-                        Image = c.String(maxLength: 250),
+                        Description = c.String(nullable: false, maxLength: 500, unicode: false),
+                        Image = c.String(nullable: false, maxLength: 250),
                         Detail = c.String(storeType: "ntext"),
                         CreatedDate = c.DateTime(),
                         CreatedBy = c.String(maxLength: 250, unicode: false),
@@ -23,7 +23,7 @@ namespace OnlineShopModel.Migrations
                         ModifiedBy = c.DateTime(),
                         MetaKeyWords = c.String(maxLength: 250),
                         MetaDescription = c.String(maxLength: 250, unicode: false),
-                        Status = c.Boolean(),
+                        Status = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -42,7 +42,7 @@ namespace OnlineShopModel.Migrations
                         CreatedDate = c.DateTime(),
                         CreatedBy = c.String(maxLength: 250, unicode: false),
                         ModifiedDate = c.DateTime(),
-                        ModifiedBy = c.Long(),
+                        ModifiedBy = c.Int(),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -50,19 +50,19 @@ namespace OnlineShopModel.Migrations
                 "dbo.CategoryNews",
                 c => new
                     {
-                        ID = c.Long(nullable: false, identity: true),
-                        Name = c.String(maxLength: 250),
+                        ID = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 250),
                         MetaTitle = c.String(maxLength: 250, unicode: false),
-                        ParentID = c.Long(),
+                        ParentID = c.Int(),
                         DisplayOrder = c.Int(),
-                        SeoTitle = c.String(maxLength: 250),
+                        SeoTitle = c.String(nullable: false, maxLength: 250),
                         CreatedDate = c.DateTime(),
                         CreatedBy = c.String(maxLength: 250, unicode: false),
                         ModifiedDate = c.DateTime(),
                         ModifiedBy = c.DateTime(),
                         MetaKeyWords = c.String(maxLength: 250),
                         MetaDescription = c.String(maxLength: 250, unicode: false),
-                        Status = c.Boolean(),
+                        Status = c.Boolean(nullable: false),
                         ShowOnHome = c.Boolean(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -72,7 +72,7 @@ namespace OnlineShopModel.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        ContactContent = c.String(storeType: "ntext"),
+                        ContactContent = c.String(nullable: false, storeType: "ntext"),
                         Status = c.Int(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -81,12 +81,12 @@ namespace OnlineShopModel.Migrations
                 "dbo.Content",
                 c => new
                     {
-                        ID = c.Long(nullable: false, identity: true),
+                        ID = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 250),
                         MetaTitle = c.String(nullable: false, maxLength: 250, unicode: false),
                         Description = c.String(maxLength: 500, unicode: false),
                         Image = c.String(nullable: false, maxLength: 250),
-                        CategoryID = c.Long(nullable: false),
+                        CategoryID = c.Int(nullable: false),
                         Detail = c.String(nullable: false, storeType: "ntext"),
                         SeoTitle = c.String(nullable: false, maxLength: 250),
                         CreatedDate = c.DateTime(),
@@ -106,7 +106,7 @@ namespace OnlineShopModel.Migrations
                 "dbo.ContentTag",
                 c => new
                     {
-                        ContentID = c.Long(nullable: false),
+                        ContentID = c.Int(nullable: false),
                         TagID = c.String(nullable: false, maxLength: 50, unicode: false),
                     })
                 .PrimaryKey(t => new { t.ContentID, t.TagID });
@@ -116,13 +116,13 @@ namespace OnlineShopModel.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        Name = c.String(maxLength: 50),
-                        Phone = c.String(maxLength: 50),
+                        Name = c.String(nullable: false, maxLength: 50),
+                        Phone = c.String(nullable: false, maxLength: 50),
                         Email = c.String(maxLength: 50),
                         Address = c.String(maxLength: 50),
                         FbContent = c.String(storeType: "ntext"),
                         CreatedDate = c.DateTime(),
-                        Status = c.Boolean(),
+                        Status = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -132,7 +132,7 @@ namespace OnlineShopModel.Migrations
                     {
                         ID = c.String(nullable: false, maxLength: 50, unicode: false),
                         FooterContent = c.String(storeType: "ntext"),
-                        Status = c.Boolean(),
+                        Status = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -145,7 +145,7 @@ namespace OnlineShopModel.Migrations
                         Link = c.String(maxLength: 250),
                         DisplayOrder = c.Int(),
                         Target = c.String(maxLength: 50),
-                        Status = c.Boolean(),
+                        Status = c.Boolean(nullable: false),
                         TypeID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
@@ -155,7 +155,7 @@ namespace OnlineShopModel.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        Name = c.String(maxLength: 50),
+                        Name = c.String(nullable: false, maxLength: 50),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -163,10 +163,10 @@ namespace OnlineShopModel.Migrations
                 "dbo.ProductCategory",
                 c => new
                     {
-                        ID = c.Long(nullable: false, identity: true),
+                        ID = c.Int(nullable: false, identity: true),
                         Name = c.String(maxLength: 250),
                         MetaTitle = c.String(maxLength: 250, unicode: false),
-                        ParentID = c.Long(),
+                        ParentID = c.Int(),
                         DisplayOrder = c.Int(),
                         SeoTitle = c.String(maxLength: 250),
                         CreatedDate = c.DateTime(),
@@ -175,7 +175,7 @@ namespace OnlineShopModel.Migrations
                         ModifiedBy = c.DateTime(),
                         MetaKeyWords = c.String(maxLength: 250),
                         MetaDescription = c.String(maxLength: 250, unicode: false),
-                        Status = c.Boolean(),
+                        Status = c.Boolean(nullable: false),
                         ShowOnHome = c.Boolean(),
                     })
                 .PrimaryKey(t => t.ID);
@@ -184,18 +184,18 @@ namespace OnlineShopModel.Migrations
                 "dbo.Product",
                 c => new
                     {
-                        ID = c.Long(nullable: false, identity: true),
-                        Name = c.String(maxLength: 250),
-                        Code = c.String(maxLength: 20, unicode: false),
+                        ID = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 250),
+                        Code = c.String(nullable: false, maxLength: 20, unicode: false),
                         MetaTitle = c.String(maxLength: 250, unicode: false),
-                        Description = c.String(maxLength: 500, unicode: false),
-                        Image = c.String(maxLength: 250),
+                        Description = c.String(nullable: false, maxLength: 4000),
+                        Image = c.String(nullable: false, maxLength: 250),
                         Images = c.String(storeType: "xml"),
-                        Price = c.Decimal(precision: 18, scale: 0),
+                        Price = c.Decimal(nullable: false, precision: 18, scale: 0),
                         PromotionPrice = c.Decimal(precision: 18, scale: 0),
-                        IncludeVAT = c.Boolean(),
-                        Quantity = c.Int(),
-                        CategoryID = c.Long(nullable: false),
+                        IncludeVAT = c.Boolean(nullable: false),
+                        Quantity = c.Int(nullable: false),
+                        CategoryID = c.Int(nullable: false),
                         Detail = c.String(storeType: "ntext"),
                         Warranty = c.Int(),
                         SeoTitle = c.String(maxLength: 250),
@@ -205,7 +205,7 @@ namespace OnlineShopModel.Migrations
                         ModifiedBy = c.DateTime(),
                         MetaKeyWords = c.String(maxLength: 250),
                         MetaDescription = c.String(maxLength: 250, unicode: false),
-                        Status = c.Boolean(),
+                        Status = c.Boolean(nullable: false),
                         TopMost = c.DateTime(),
                         ViewCount = c.Int(),
                     })
@@ -216,11 +216,11 @@ namespace OnlineShopModel.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        Image = c.String(maxLength: 250),
+                        Image = c.String(nullable: false, maxLength: 250),
                         DisplayOrder = c.Int(),
-                        Link = c.String(maxLength: 250),
+                        Link = c.String(nullable: false, maxLength: 250),
                         Description = c.String(maxLength: 50),
-                        Status = c.Boolean(),
+                        Status = c.Boolean(nullable: false),
                         CreatedDate = c.DateTime(),
                         CreatedBy = c.String(maxLength: 250, unicode: false),
                         ModifiedDate = c.DateTime(),
@@ -233,10 +233,10 @@ namespace OnlineShopModel.Migrations
                 c => new
                     {
                         ID = c.String(nullable: false, maxLength: 50, unicode: false),
-                        Name = c.String(maxLength: 50),
+                        Name = c.String(nullable: false, maxLength: 50),
                         Type = c.String(maxLength: 50),
-                        Value = c.String(maxLength: 50),
-                        Status = c.Boolean(),
+                        Value = c.String(nullable: false, maxLength: 50),
+                        Status = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -245,7 +245,7 @@ namespace OnlineShopModel.Migrations
                 c => new
                     {
                         ID = c.String(nullable: false, maxLength: 50, unicode: false),
-                        Name = c.String(maxLength: 50),
+                        Name = c.String(nullable: false, maxLength: 50),
                     })
                 .PrimaryKey(t => t.ID);
             

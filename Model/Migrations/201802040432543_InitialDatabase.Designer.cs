@@ -7,13 +7,13 @@ namespace OnlineShopModel.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class ChangeLongToInt : IMigrationMetadata
+    public sealed partial class InitialDatabase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ChangeLongToInt));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialDatabase));
         
         string IMigrationMetadata.Id
         {
-            get { return "201801301746161_ChangeLongToInt"; }
+            get { return "201802040432543_InitialDatabase"; }
         }
         
         string IMigrationMetadata.Source

@@ -20,23 +20,17 @@
             {
                 <div class="box-header">
                     <h3 class="box-title">Danh sách người dùng</h3>
-
                     <div class="box-tools pull-right">
-
                         <div class="input-group input-group-sm col-md-4 pull-right col-xs-offset-1">
                             @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control pull-right", @placeholder = "Tìm kiếm" })
                             <div class="input-group-btn">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                             </div>
-
                         </div>
-
                         <div class="pull-right">
                             <a href="/Admin/Account/Create" class="btn btn-info btn-sm"> <i class="fa  fa-user-plus"></i>Thêm mới</a>
                         </div>
                     </div>
-
-
                 </div>
             }
             <!-- /.box-header -->
@@ -70,9 +64,9 @@
                             <td>@item.Email</td>
                             <td>@item.Phone</td>
                             <td>
-                                @Html.ActionLink((@item.Status == true ? "Kích hoạt" : "Khóa"), "ChangeStatus","Account",new { id = @item.ID }, new { @class = (@item.Status == true ? "btnchangestatus label label-success" : "btnchangestatus label label-danger"), @data_id = @item.ID })</td>
-                            
-
+                                @Html.ActionLink((@item.Status == true ? "Kích hoạt" : "Khóa"), "ChangeStatus", "Account",
+                                    new { id = @item.ID }, new { @class = (@item.Status == true ? "btnchangestatus label label-success" : "btnchangestatus label label-danger"), @data_id = @item.ID })
+                            </td>
                             <td>
                                 @Html.ActionLink("Chi tiết", "Details", new { id = item.ID }) |
                                 @Html.ActionLink("Sửa", "Edit", new { id = item.ID }) |
@@ -82,7 +76,6 @@
                                     Confirm = "Bạn muốn xóa tài khoản này?",
                                     OnSuccess = "$('#row_" + @item.ID + "').remove()",
                                 })
-
                             </td>
                         </tr>
                     }
@@ -95,5 +88,4 @@
         Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) của @Model.PageCount
     </div>
     <!-- /.box -->
-
 </div>

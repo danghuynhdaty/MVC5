@@ -76,13 +76,9 @@
     <Compile Include="EF\Slide.cs" />
     <Compile Include="EF\SystemConfig.cs" />
     <Compile Include="EF\Tag.cs" />
-    <Compile Include="Migrations\201801220428057_InitialProject.cs" />
-    <Compile Include="Migrations\201801220428057_InitialProject.Designer.cs">
-      <DependentUpon>201801220428057_InitialProject.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801301746161_ChangeLongToInt.cs" />
-    <Compile Include="Migrations\201801301746161_ChangeLongToInt.Designer.cs">
-      <DependentUpon>201801301746161_ChangeLongToInt.cs</DependentUpon>
+    <Compile Include="Migrations\201802040432543_InitialDatabase.cs" />
+    <Compile Include="Migrations\201802040432543_InitialDatabase.Designer.cs">
+      <DependentUpon>201802040432543_InitialDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,11 +91,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801220428057_InitialProject.resx">
-      <DependentUpon>201801220428057_InitialProject.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801301746161_ChangeLongToInt.resx">
-      <DependentUpon>201801301746161_ChangeLongToInt.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802040432543_InitialDatabase.resx">
+      <DependentUpon>201802040432543_InitialDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

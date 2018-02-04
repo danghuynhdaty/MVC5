@@ -1,8 +1,9 @@
 ﻿var account = {
     init: function () {
-        account.registerEvents();
+        account.changeStatus();
+        account.deleteAccount();
     },
-    registerEvents: function () {
+    changeStatus: function () {
         $('.btnchangestatus').off('click').on('click', function (e) {
             e.preventDefault();
             var btn = $(this);
@@ -40,6 +41,9 @@
                 }
             });
         });
+    },
+    deleteAccount: function () {
+
     }
 };
 

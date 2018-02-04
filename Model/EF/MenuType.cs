@@ -1,4 +1,4 @@
-namespace Model.EF
+﻿namespace Model.EF
 {
     using System;
     using System.Collections.Generic;
@@ -12,6 +12,8 @@ namespace Model.EF
         public int ID { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Tên")]
+        [Required(ErrorMessage ="Tên không được rỗng")]
         public string Name { get; set; }
     }
 }

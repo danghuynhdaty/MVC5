@@ -6799,6 +6799,7 @@
     <Content Include="Assets\Admin\JS\Controller\accountController.js" />
     <Content Include="Assets\Admin\JS\Controller\contentController.js" />
     <Content Include="Assets\Admin\JS\Controller\productController.js" />
+    <Content Include="Assets\Admin\JS\View\Product\create.js" />
     <Content Include="Assets\Admin\plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="Assets\Admin\plugins\bootstrap-slider\slider.css" />
     <Content Include="Assets\Admin\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.js" />

@@ -1,4 +1,4 @@
-namespace Model.EF
+﻿namespace Model.EF
 {
     using System;
     using System.Collections.Generic;
@@ -12,8 +12,11 @@ namespace Model.EF
         public int ID { get; set; }
 
         [Column(TypeName = "ntext")]
+        [Display(Name = "Nội dung liên hệ")]
+        [Required(ErrorMessage ="Nội dung không được rỗng")]
         public string ContactContent { get; set; }
 
+        [Display(Name = "Trạng thái")]
         public int? Status { get; set; }
     }
 }
